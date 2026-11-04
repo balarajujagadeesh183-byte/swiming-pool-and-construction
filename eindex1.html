@@ -1,0 +1,2594 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bluewave Pools Elite - Luxury swimming pool design and construction.">
+<title>Bluewave Pools | Elite Luxury Collection</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap%22 rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<style>
+
+:root {
+
+    --blue: #008fe8;
+
+    --blue-dark: #006fbd;
+
+    --teal: #36c5c0;
+
+    --navy: #123957;
+
+    --navy-soft: #f4f9fc;
+
+    --text: #163653;
+
+    --muted: #536b80;
+
+    --card: #ffffff;
+
+    --border: #d8e4ee;
+
+    --white: #ffffff;
+
+    --black: #123957;
+
+    --page: #ffffff;
+
+    --section-alt: #f4f9fc;
+
+    --footer-bg: #eaf4fb;
+
+    --soft: #e5f5fb;
+
+    --gold: #008fe8;
+
+    --gold-light: #36c5c0;
+
+}
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+    scroll-padding-top: 100px;
+
+}
+
+body {
+
+    font-family: "DM Sans", sans-serif;
+
+    background: var(--page);
+
+    color: var(--text);
+
+    line-height: 1.7;
+
+    overflow-x: hidden;
+
+}
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+button, input, select, textarea {
+
+    font: inherit;
+
+}
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+
+}
+
+section {
+
+    scroll-margin-top: 100px;
+
+}
+
+.container {
+
+    width: min(1200px, 90%);
+
+    margin: auto;
+
+}
+
+/* HEADER */
+
+header {
+
+    position: fixed;
+
+    z-index: 1000;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    min-height: 88px;
+
+    padding: 10px 5%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    background: rgba(255,255,255,.96);
+
+    backdrop-filter: blur(16px);
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+
+}
+
+.logo img {
+
+    width: 58px;
+
+    height: 58px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+}
+
+.brand-text a {
+
+    display: flex;
+
+    flex-direction: column;
+
+    font-size: 23px;
+
+    line-height: 1.1;
+
+    font-weight: 800;
+
+}
+
+.brand-bluewave {
+
+    color: var(--blue);
+
+}
+
+.brand-pools {
+
+    color: #83e4d5;
+}
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+}
+
+nav > a,
+
+.dropdown-toggle {
+
+    color: var(--text);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: color .3s;
+
+}
+
+nav > a:hover,
+
+.dropdown-toggle:hover {
+
+    color: var(--blue);
+
+}
+
+.dropdown {
+
+    position: relative;
+
+    padding: 12px 0;
+
+}
+
+.dropdown-toggle {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+}
+
+.dropdown-toggle i {
+
+    font-size: 10px;
+
+    transition: transform .3s;
+
+}
+
+.dropdown:hover .dropdown-toggle i,
+
+.dropdown.open .dropdown-toggle i {
+
+    transform: rotate(180deg);
+
+}
+
+.dropdown-menu {
+
+    position: absolute;
+
+    top: calc(100% + 5px);
+
+    left: 0;
+
+    min-width: 195px;
+
+    padding: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    box-shadow: 0 15px 35px #0007;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(12px);
+
+    transition: .25s;
+
+}
+
+.dropdown:hover .dropdown-menu,
+
+.dropdown:focus-within .dropdown-menu,
+
+.dropdown.open .dropdown-menu {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+
+.dropdown-menu a {
+
+    padding: 10px;
+
+    border-radius: 6px;
+
+    color: var(--text);
+
+    font-size: 12px;
+
+}
+
+.dropdown-menu a:hover,
+
+.dropdown-menu a.active {
+
+    background: var(--soft);
+
+    color: var(--blue);
+
+}
+
+.header-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+}
+
+.display-btn {
+
+    width: 37px;
+
+    height: 37px;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--border);
+
+    background: transparent;
+
+    color: var(--blue);
+
+    cursor: pointer;
+     border: 1px solid  #83e4d5;
+}
+
+}
+
+.display-btn:hover,
+
+.display-btn.active {
+
+    background: var(--blue);
+
+    color: #ffffff;
+
+}
+
+.login-btn {
+
+    padding: 10px 19px;
+
+    border: 1px solid var(--blue);
+
+    border-radius: 30px;
+
+    color: var(--blue);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: .3s;
+
+}
+
+.login-btn:hover {
+
+    background: var(--blue);
+
+    color: #ffffff;
+
+}
+
+.menu-toggle {
+
+    display: none;
+
+    width: 40px;
+
+    height: 40px;
+
+    border: 1px solid var(--border);
+
+    background: transparent;
+
+    color: var(--blue);
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+}
+
+/* BUTTONS AND COMMON */
+
+.section {
+
+    padding: 100px 7%;
+
+}
+
+.eyebrow {
+
+    display: inline-block;
+
+    color: var(--blue);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 16px;
+
+}
+
+h1, h2, h3 {
+
+    color: var(--heading);
+
+}
+
+h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(34px, 4.5vw, 55px);
+
+    font-weight: 500;
+
+    line-height: 1.2;
+
+}
+
+h2 em {
+
+    color: var(--blue);
+
+}
+
+.section-heading {
+
+    text-align: center;
+
+    max-width: 720px;
+
+    margin: 0 auto 48px;
+
+}
+
+.section-heading p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin-top: 15px;
+
+}
+
+.gold-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 14px 26px;
+
+    background: var(--blue);
+
+    color: #10202a;
+
+    border: 1px solid var(--blue);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: .5px;
+
+    transition: .35s;
+
+
+}
+
+.gold-btn:hover {
+
+    background: transparent;
+
+    color: var(--blue);
+
+    transform: translateY(-4px);
+
+}
+
+.outline-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 14px 26px;
+
+    border: 1px solid rgba(255,255,255,.7);
+
+    color: var(--heading);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: .3s;
+
+    color:var(--blue);
+
+     border: 1px solid  #83e4d5;
+}
+
+
+}
+
+.outline-btn:hover {
+
+    background: white;
+
+    color: #ffffff;
+
+}
+
+/* HERO */
+
+.hero {
+
+    min-height: 780px;
+
+    padding: 170px 9% 100px;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    background:
+
+        linear-gradient(90deg, rgba(2,17,25,.92), rgba(3,27,37,.55), rgba(3,27,37,.1)),
+
+        url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=90") center/cover no-repeat;
+
+}
+
+.hero-content {
+
+    max-width: 720px;
+
+    animation: heroEnter 1s ease both;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.hero-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: var(--blue);
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    font-weight: 800;
+
+}
+
+.hero-label::before {
+
+    content: "";
+
+    width: 35px;
+
+    height: 1px;
+
+    background: var(--blue);
+
+}
+
+.hero h1 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(52px, 7vw, 96px);
+
+    line-height: 1.08;
+
+    font-weight: 500;
+
+    margin: 25px 0;
+
+    color:var(--blue);
+
+}
+
+.hero h1 em {
+
+    color: var(--blue);
+
+}
+
+.hero p {
+
+    max-width: 510px;
+
+    color: #d4dfe2;
+
+    font-size: 15px;
+
+}
+
+.hero-buttons {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 13px;
+
+    margin-top: 32px;
+
+    border-radius: 30%;
+
+}
+
+.hero-bottom {
+
+    position: absolute;
+
+    bottom: 35px;
+
+    left: 9%;
+
+    right: 9%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-top: 1px solid rgba(255,255,255,.3);
+
+    padding-top: 17px;
+
+    color: #dce6e7;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+}
+
+/* INTRO */
+
+.intro {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.1fr;
+
+    gap: 8%;
+
+    align-items: center;
+
+    background: var(--page);
+
+}
+
+.intro-image {
+
+    position: relative;
+
+}
+
+.intro-image img {
+
+    width: 100%;
+
+    height: 520px;
+
+    object-fit: cover;
+
+}
+
+.intro-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 15px -15px -15px 15px;
+
+    border: 1px solid var(--blue);
+
+    z-index: -1;
+
+}
+
+.intro-content p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin: 20px 0;
+
+}
+
+.intro-stats {
+
+    display: flex;
+
+    gap: 35px;
+
+    margin: 30px 0;
+
+}
+
+.intro-stats strong {
+
+    display: block;
+
+    color: var(--blue);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 30px;
+
+}
+
+.intro-stats small {
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+}
+
+/* ELITE FEATURES */
+
+.features {
+
+    background: var(--section-alt);
+
+}
+
+.feature-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+}
+
+.feature-card {
+
+    padding: 38px 28px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    transition: .35s;
+
+}
+
+.feature-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: var(--blue);
+
+    box-shadow: 0 18px 35px #0004;
+
+}
+
+.feature-card i {
+
+    color: var(--blue);
+
+    font-size: 28px;
+
+    margin-bottom: 25px;
+
+}
+
+.feature-card h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 21px;
+
+    margin-bottom: 12px;
+
+}
+
+.feature-card p {
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+}
+
+/* LUXURY POOL COLLECTION */
+
+.collection {
+
+    background: var(--page);
+
+}
+
+.collection-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+.collection-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    height: 440px;
+
+    background: var(--card);
+
+}
+
+.collection-card img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .7s;
+
+}
+
+.collection-card:hover img {
+
+    transform: scale(1.09);
+
+}
+
+.collection-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(0deg, #03151ee8, transparent 75%);
+
+}
+
+.collection-info {
+
+    position: absolute;
+
+    z-index: 2;
+
+    bottom: 0;
+
+    left: 0;
+
+    padding: 25px;
+
+}
+
+.collection-info span {
+
+    color: var(--blue);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+.collection-info h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 24px;
+
+    margin-top: 8px;
+
+}
+
+/* FEATURED DESIGN */
+
+.design {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 8%;
+
+    background: var(--section-alt);
+
+}
+
+.design-image img {
+
+    width: 100%;
+
+    height: 520px;
+
+    object-fit: cover;
+
+}
+
+.design-content p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin: 20px 0;
+
+}
+
+.design-list {
+
+    list-style: none;
+
+    display: grid;
+
+    gap: 13px;
+
+    margin: 25px 0;
+
+}
+
+.design-list li {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: var(--text);
+
+    font-size: 12px;
+
+}
+
+.design-list i {
+
+    color: var(--blue);
+
+}
+
+/* PROCESS */
+
+.process {
+
+    background: var(--page);
+
+}
+
+.process-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid var(--border);
+
+}
+
+.process-item {
+
+    padding: 30px 22px;
+
+    border-right: 1px solid var(--border);
+
+    transition: .3s;
+
+}
+
+.process-item:hover {
+
+    background: var(--card);
+
+}
+
+.process-item:last-child {
+
+    border-right: 0;
+
+}
+
+.process-number {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 42px;
+
+    color: var(--blue);
+
+    opacity: .8;
+
+}
+
+.process-item h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 20px;
+
+    margin: 12px 0;
+
+}
+
+.process-item p {
+
+    font-size: 12px;
+
+    color: var(--muted);
+
+}
+
+/* GALLERY */
+
+.gallery {
+
+    background: var(--section-alt);
+
+}
+
+.gallery-grid {
+
+    display: grid;
+
+    grid-template-columns: 1.2fr .8fr .8fr;
+
+    grid-template-rows: 230px 230px;
+
+    gap: 14px;
+
+}
+
+.gallery-item {
+
+    overflow: hidden;
+
+    position: relative;
+
+}
+
+.gallery-item:first-child {
+
+    grid-row: span 2;
+
+}
+
+.gallery-item img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .5s;
+
+}
+
+.gallery-item:hover img {
+
+    transform: scale(1.07);
+
+}
+
+/* TESTIMONIALS */
+
+.testimonials {
+
+    background: var(--page);
+
+}
+
+.testimonial-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+}
+
+.testimonial-card {
+
+    padding: 30px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+}
+
+.stars {
+
+    color: var(--blue);
+
+    font-size: 12px;
+
+    margin-bottom: 18px;
+
+}
+
+.testimonial-card p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    font-style: italic;
+
+}
+
+.client {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 22px;
+
+}
+
+.client-avatar {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--blue);
+
+    color: #ffffff;
+
+    font-weight: 800;
+
+}
+
+.client strong {
+
+    display: block;
+
+    font-size: 12px;
+
+}
+
+.client small {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+}
+
+/* CONTACT */
+
+.contact {
+
+    display: grid;
+
+    grid-template-columns: 1fr .85fr;
+
+    align-items: center;
+
+    gap: 8%;
+
+    padding: 100px 8%;
+
+    background:
+
+        linear-gradient(90deg, rgba(3,20,28,.95), rgba(3,20,28,.75)),
+
+        url("https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=1800&q=85") center/cover;
+
+}
+
+.contact-content h2 {
+
+    font-size: clamp(40px, 5vw, 65px);
+
+}
+
+.contact-content p {
+
+    color: #c1d1d5;
+
+    font-size: 13px;
+
+    margin: 20px 0;
+
+}
+
+.contact-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 17px;
+
+}
+
+.contact-info i {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 1px solid var(--blue);
+
+    color: var(--blue);
+
+}
+
+.contact-info strong {
+
+    display: block;
+
+    color: var(--heading);
+
+    font-size: 12px;
+
+}
+
+.contact-info small {
+
+    display: block;
+
+    color: #a9bdc3;
+
+    font-size: 9px;
+
+}
+
+.contact-form {
+
+    padding: 32px;
+
+    background: var(--card);
+
+    color: #18313d;
+
+}
+
+.contact-form h3 {
+
+    color: #18313d;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+}
+
+.contact-form p {
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    margin: 8px 0 20px;
+
+}
+
+.contact-form label {
+
+    display: block;
+
+    color: var(--text);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    margin: 12px 0 5px;
+
+}
+
+.contact-form input,
+
+.contact-form select,
+
+.contact-form textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #d7dfdc;
+
+    background: white;
+
+    color: #18313d;
+
+    font-size: 12px;
+
+    outline: none;
+
+}
+
+.contact-form input:focus,
+
+.contact-form select:focus,
+
+.contact-form textarea:focus {
+
+    border-color: var(--blue);
+
+}
+
+.contact-form textarea {
+
+    resize: vertical;
+
+}
+
+.contact-form button {
+
+    width: 100%;
+
+    margin-top: 17px;
+
+    cursor: pointer;
+
+}
+
+.form-note {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    text-align: center;
+
+    margin-top: 10px;
+
+}
+
+/* FOOTER */
+
+footer {
+
+    padding: 55px 7% 0;
+
+    background: var(--footer-bg);
+
+    color: var(--text);
+
+}
+
+.footer-container {
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+
+    gap: 30px;
+
+    padding-bottom: 40px;
+
+}
+
+.footer-column h3 {
+
+    color: var(--blue);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 19px;
+
+    margin-bottom: 17px;
+
+}
+
+.footer-column p {
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    margin: 9px 0;
+
+}
+
+.footer-column > a {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    margin-bottom: 11px;
+
+    transition: .3s;
+
+}
+
+.footer-column > a:hover {
+
+    color: var(--blue);
+
+    transform: translateX(4px);
+
+}
+
+.social-links {
+
+    display: flex;
+
+    gap: 9px;
+
+    margin-top: 18px;
+
+}
+
+.social-links a {
+
+    width: 34px;
+
+    height: 34px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 1px solid var(--border);
+
+    color: var(--blue);
+
+    border-radius: 50%;
+
+    transition: .3s;
+
+}
+
+.social-links a:hover {
+
+    background: var(--blue);
+
+    color: #ffffff;
+
+    transform: translateY(-4px);
+
+}
+
+.copyright {
+
+    border-top: 1px solid var(--border);
+
+    padding: 19px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+}
+
+.legal-links {
+
+    display: flex;
+
+    gap: 20px;
+
+}
+
+.legal-links a:hover {
+
+    color: var(--blue);
+
+}
+
+/* REVEAL ANIMATION */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition: opacity .8s ease, transform .8s ease;
+
+}
+
+.reveal.show {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+@keyframes heroEnter {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(35px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+
+    *::before,
+
+    *::after {
+
+        scroll-behavior: auto !important;
+
+        animation-duration: .01ms !important;
+
+        transition-duration: .01ms !important;
+
+    }
+
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+
+    nav {
+
+        gap: 13px;
+
+    }
+
+    nav > a,
+
+    .dropdown-toggle {
+
+        font-size: 11px;
+
+    }
+
+    .header-actions {
+
+        gap: 5px;
+
+    }
+
+    .login-btn {
+
+        padding: 9px 12px;
+
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    header {
+
+        flex-wrap: wrap;
+
+    }
+
+    .menu-toggle {
+
+        display: grid;
+
+        place-items: center;
+
+        margin-left: auto;
+
+    }
+
+    nav {
+
+        display: none;
+
+        order: 5;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 3px;
+
+        padding: 12px 0;
+
+        border-top: 1px solid var(--border);
+
+    }
+
+    nav.show {
+
+        display: flex;
+
+    }
+
+    nav > a,
+
+    .dropdown-toggle {
+
+        display: flex;
+
+        width: 100%;
+
+        padding: 10px 5px;
+
+        font-size: 13px;
+
+    }
+
+    .dropdown {
+
+        padding: 0;
+
+    }
+
+    .dropdown-menu {
+
+        position: static;
+
+        display: none;
+
+        width: 100%;
+
+        margin-top: 5px;
+
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: none;
+
+        box-shadow: none;
+
+    }
+
+    .dropdown.open .dropdown-menu {
+
+        display: flex;
+
+    }
+
+    .intro,
+
+    .design,
+
+    .contact {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .feature-grid,
+
+    .testimonial-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .collection-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .process-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .process-item:nth-child(2) {
+
+        border-right: 0;
+
+    }
+
+    .process-item:nth-child(n+3) {
+
+        border-top: 1px solid var(--border);
+
+    }
+
+    .footer-container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .gallery-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-rows: repeat(2, 220px);
+
+    }
+
+    .gallery-item:first-child {
+
+        grid-row: auto;
+
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    header {
+
+        min-height: 75px;
+
+        padding: 8px 5%;
+
+        gap: 8px;
+
+    }
+
+    .logo img {
+
+        width: 47px;
+
+        height: 47px;
+
+    }
+
+    .brand-text a {
+
+        font-size: 18px;
+
+    }
+
+    .display-btn {
+
+        width: 33px;
+
+        height: 33px;
+
+        font-size: 11px;
+
+    }
+
+    .login-btn {
+
+        font-size: 10px;
+
+        padding: 8px 10px;
+
+    }
+
+    .hero {
+
+        min-height: 700px;
+
+        padding: 150px 7% 100px;
+
+        background-position: 60% center;
+
+    }
+
+    .hero h1 {
+
+        font-size: clamp(45px, 12vw, 64px);
+
+    }
+
+    .hero p {
+
+        font-size: 13px;
+
+    }
+
+    .hero-bottom {
+
+        left: 7%;
+
+        right: 7%;
+
+        font-size: 8px;
+
+        letter-spacing: 1px;
+
+    }
+
+    .section {
+
+        padding: 70px 6%;
+
+    }
+
+    .intro-image img,
+
+    .design-image img {
+
+        height: 350px;
+
+    }
+
+    .intro-stats {
+
+        gap: 20px;
+
+    }
+
+    .feature-grid,
+
+    .collection-grid,
+
+    .testimonial-grid,
+
+    .process-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .collection-card {
+
+        height: 350px;
+
+    }
+
+    .process-item,
+
+    .process-item:nth-child(n) {
+
+        border-right: 0;
+
+        border-top: 1px solid var(--border);
+
+        padding: 25px 10px;
+
+    }
+
+    .process-item:first-child {
+
+        border-top: 0;
+
+    }
+
+    .gallery-grid {
+
+        grid-template-columns: 1fr;
+
+        grid-template-rows: repeat(4, 230px);
+
+    }
+
+    .contact {
+
+        padding: 70px 6%;
+
+    }
+
+    .contact-form {
+
+        padding: 23px;
+
+    }
+
+    .footer-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+    }
+
+    .copyright {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+    }
+
+    .legal-links {
+
+        justify-content: center;
+
+    }
+
+}
+</style>
+</head>
+
+ 
+<body>
+<!-- HEADER -->
+<header>
+<div class="logo">
+<img src="images/Glossy Blue Pool House Emblem.png" alt="Bluewave Pools Logo">
+<div class="brand-text">
+<a href="index.html">
+<span class="brand-bluewave">Bluewave</span>
+<span class="brand-pools">Pools</span>
+</a>
+</div>
+</div>
+<button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+<i class="fa-solid fa-bars"></i>
+</button>
+<nav id="mainNav">
+<div class="dropdown" id="homeDropdown">
+<a href="index.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+
+                Home <i class="fa-solid fa-chevron-down"></i>
+</a>
+<div class="dropdown-menu">
+<a href="index1.html" class="active">Home – Premium</a>
+<a href="eindex1.html">Home – Elite</a>
+</div>
+</div>
+<a href="about1.html">About Us</a>
+<a href="services1.html">Services</a>
+<a href="blog1.html">Blog</a>
+<a href="contact1.html">Contact</a>
+<a href="dashboard1.html">Dashboard</a>
+</nav>
+<div class="header-actions">
+<button class="display-btn" id="rtlMode" type="button" aria-label="Toggle RTL">RTL</button>
+<button class="display-btn" id="themeMode" type="button" aria-label="Toggle theme" title="Toggle theme">
+<i class="fa-solid fa-moon"></i>
+</button>
+<a href="login.html" class="login-btn"> LOGIN </i></a>
+</div>
+</header>
+<main>
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="hero-content">
+<span class="hero-label">THE ELITE COLLECTION</span>
+<h1>Luxury beyond<br>the <em>ordinary.</em></h1>
+<p>Experience the art of extraordinary pool design. Discover timeless elegance, exceptional craftsmanship and private outdoor spaces made to inspire.</p>
+<div class="hero-buttons">
+<a href="#contact" class="gold-btn">CREATE YOUR POOL <i class="fa-solid fa-arrow-right"></i></a>
+<a href="#collection" class="outline-btn">EXPLORE COLLECTION</a>
+</div>
+</div>
+<div class="hero-bottom">
+<span>DESIGN · CRAFT · EXPERIENCE</span>
+<span>BLUEWAVE POOLS — ELITE</span>
+</div>
+</section>
+<!-- INTRODUCTION -->
+<section class="section intro" id="intro">
+<div class="intro-image reveal">
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85"
+
+                 alt="Luxury modern swimming pool" loading="lazy">
+</div>
+<div class="intro-content reveal">
+<span class="eyebrow">A NEW STANDARD OF LIVING</span>
+<h2>Designed for distinction.<br><em>Created for you.</em></h2>
+<p>At Bluewave Pools Elite, we believe your outdoor space should reflect your personality. Our approach brings together thoughtful architecture, refined materials and beautiful water features.</p>
+<p>From the first concept to the final detail, every element is planned to create a pool that feels truly yours.</p>
+<div class="intro-stats">
+<div>
+<strong>01</strong>
+<small>Personalised Design</small>
+</div>
+<div>
+<strong>02</strong>
+<small>Refined Craftsmanship</small>
+</div>
+<div>
+<strong>03</strong>
+<small>Timeless Appeal</small>
+</div>
+</div>
+<a href="#contact" class="gold-btn">DISCUSS YOUR VISION ↗</a>
+</div>
+</section>
+<!-- ELITE FEATURES -->
+<section class="section features" id="features">
+<div class="section-heading reveal">
+<span class="eyebrow">THE ELITE EXPERIENCE</span>
+<h2>Excellence in every <em>detail.</em></h2>
+<p>Discover a considered approach to luxury pool design, construction and outdoor living.</p>
+</div>
+<div class="feature-grid">
+<article class="feature-card reveal">
+<i class="fa-solid fa-compass-drafting"></i>
+<h3>Architectural Design</h3>
+<p>Distinctive pool concepts planned around your architecture, landscape and lifestyle.</p>
+</article>
+<article class="feature-card reveal">
+<i class="fa-solid fa-gem"></i>
+<h3>Premium Finishes</h3>
+<p>Carefully selected finishes and details that give your pool a refined appearance.</p>
+</article>
+<article class="feature-card reveal">
+<i class="fa-solid fa-water"></i>
+<h3>Water Features</h3>
+<p>Elegant water elements that bring movement, atmosphere and visual interest.</p>
+</article>
+<article class="feature-card reveal">
+<i class="fa-solid fa-lightbulb"></i>
+<h3>Lighting Concepts</h3>
+<p>Thoughtful lighting ideas that create a beautiful atmosphere after sunset.</p>
+</article>
+<article class="feature-card reveal">
+<i class="fa-solid fa-house"></i>
+<h3>Outdoor Living</h3>
+<p>Poolside environments designed to complement your home and outdoor space.</p>
+</article>
+<article class="feature-card reveal">
+<i class="fa-solid fa-handshake"></i>
+<h3>Personal Guidance</h3>
+<p>A collaborative experience with clear communication throughout your project.</p>
+</article>
+</div>
+</section>
+<!-- COLLECTION -->
+<section class="section collection" id="collection">
+<div class="section-heading reveal">
+<span class="eyebrow">THE SIGNATURE COLLECTION</span>
+<h2>Find your style of <em>escape.</em></h2>
+<p>Explore different pool inspirations and discover the look that speaks to you.</p>
+</div>
+<div class="collection-grid">
+<article class="collection-card reveal">
+<img src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=900&q=85"
+
+                     alt="Infinity swimming pool" loading="lazy">
+<div class="collection-info">
+<span>01 · SIGNATURE</span>
+<h3>Infinity Collection</h3>
+</div>
+</article>
+<article class="collection-card reveal">
+<img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=900&q=85"
+
+                     alt="Modern luxury pool" loading="lazy">
+<div class="collection-info">
+<span>02 · CONTEMPORARY</span>
+<h3>Modern Elegance</h3>
+</div>
+</article>
+<article class="collection-card reveal">
+<img src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=900&q=85"
+
+                     alt="Private tropical pool" loading="lazy">
+<div class="collection-info">
+<span>03 · PRIVATE RETREAT</span>
+<h3>Nature Inspired</h3>
+</div>
+</article>
+</div>
+</section>
+<!-- DESIGN SECTION -->
+<section class="section design" id="design">
+<div class="design-content reveal">
+<span class="eyebrow">THE ART OF POOL DESIGN</span>
+<h2>Every detail tells<br><em>a story.</em></h2>
+<p>A remarkable pool is more than a place to swim. It is an extension of your home, a space to relax and an experience to share.</p>
+<ul class="design-list">
+<li><i class="fa-solid fa-check"></i> Tailored pool layouts</li>
+<li><i class="fa-solid fa-check"></i> Premium finish selections</li>
+<li><i class="fa-solid fa-check"></i> Integrated lighting concepts</li>
+<li><i class="fa-solid fa-check"></i> Thoughtful landscape planning</li>
+</ul>
+<a href="#contact" class="gold-btn">START YOUR DESIGN ↗</a>
+</div>
+<div class="design-image reveal">
+<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"
+
+                 alt="Luxury outdoor architecture and pool" loading="lazy">
+</div>
+</section>
+<!-- PROCESS -->
+<section class="section process" id="process">
+<div class="section-heading reveal">
+<span class="eyebrow">OUR APPROACH</span>
+<h2>From vision to <em>reality.</em></h2>
+<p>A clear and collaborative process that keeps your project moving with purpose.</p>
+</div>
+<div class="process-grid">
+<article class="process-item reveal">
+<span class="process-number">01</span>
+<h3>Discover</h3>
+<p>We understand your ideas, requirements, property and aspirations.</p>
+</article>
+<article class="process-item reveal">
+<span class="process-number">02</span>
+<h3>Design</h3>
+<p>We develop a considered design and discuss materials and project details.</p>
+</article>
+<article class="process-item reveal">
+<span class="process-number">03</span>
+<h3>Create</h3>
+<p>Our construction process brings your approved design to life.</p>
+</article>
+<article class="process-item reveal">
+<span class="process-number">04</span>
+<h3>Enjoy</h3>
+<p>Experience the finished space and enjoy your own private retreat.</p>
+</article>
+</div>
+</section>
+<!-- GALLERY -->
+<section class="section gallery" id="gallery">
+<div class="section-heading reveal">
+<span class="eyebrow">VISUAL INSPIRATION</span>
+<h2>A glimpse of <em>luxury living.</em></h2>
+<p>Explore beautiful poolside spaces and design inspiration.</p>
+</div>
+<div class="gallery-grid">
+<div class="gallery-item reveal">
+<img src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=1100&q=85"
+
+                     alt="Luxury swimming pool" loading="lazy">
+</div>
+<div class="gallery-item reveal">
+<img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=85"
+
+                     alt="Modern pool design" loading="lazy">
+</div>
+<div class="gallery-item reveal">
+<img src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=800&q=85"
+
+                     alt="Blue pool water" loading="lazy">
+</div>
+<div class="gallery-item reveal">
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=85"
+
+                     alt="Elegant outdoor home" loading="lazy">
+</div>
+<div class="gallery-item reveal">
+<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=85"
+
+                     alt="Luxury outdoor living" loading="lazy">
+</div>
+</div>
+</section>
+<!-- TESTIMONIALS -->
+<section class="section testimonials" id="testimonials">
+<div class="section-heading reveal">
+<span class="eyebrow">CLIENT EXPERIENCES</span>
+<h2>Designed around <em>dreams.</em></h2>
+<p>Sample testimonial layouts. Replace these with genuine customer feedback before publishing.</p>
+</div>
+<div class="testimonial-grid">
+<article class="testimonial-card reveal">
+<div class="stars">★★★★★</div>
+<p>"The design process was thoughtful and the team helped us understand each stage of our pool project."</p>
+<div class="client">
+<div class="client-avatar">A</div>
+<div>
+<strong>Alex Morgan</strong>
+<small>Sample Client Review</small>
+</div>
+</div>
+</article>
+<article class="testimonial-card reveal">
+<div class="stars">★★★★★</div>
+<p>"We loved the attention to detail and the way the design complemented our outdoor space."</p>
+<div class="client">
+<div class="client-avatar">S</div>
+<div>
+<strong>Sarah Williams</strong>
+<small>Sample Client Review</small>
+</div>
+</div>
+</article>
+<article class="testimonial-card reveal">
+<div class="stars">★★★★★</div>
+<p>"Communication and planning made the overall experience feel clear and organised."</p>
+<div class="client">
+<div class="client-avatar">D</div>
+<div>
+<strong>David Thomas</strong>
+<small>Sample Client Review</small>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- CONTACT -->
+<section class="contact" id="contact">
+<div class="contact-content reveal">
+<span class="eyebrow">YOUR PRIVATE ESCAPE AWAITS</span>
+<h2>Let's create<br><em>something timeless.</em></h2>
+<p>Share your vision with us. Let's explore the possibilities for your next pool project.</p>
+<div class="contact-info">
+<i class="fa-regular fa-envelope"></i>
+<div>
+<small>EMAIL US</small>
+<strong>info@aqualifepools.com</strong>
+</div>
+</div>
+<div class="contact-info">
+<i class="fa-solid fa-phone"></i>
+<div>
+<small>CALL US</small>
+<strong>+91 7799629151</strong>
+</div>
+</div>
+<div class="contact-info">
+<i class="fa-solid fa-location-dot"></i>
+<div>
+<small>LOCATION</small>
+<strong>Your service area</strong>
+</div>
+</div>
+</div>
+<form class="contact-form reveal" id="eliteForm">
+<h3>Begin Your Project</h3>
+<p>Tell us a little about your requirements.</p>
+<label for="eliteName">Full Name</label>
+<input type="text" id="eliteName" name="name" placeholder="Enter your name" required>
+<label for="eliteEmail">Email Address</label>
+<input type="email" id="eliteEmail" name="email" placeholder="Enter your email" required>
+<label for="eliteService">Project Type</label>
+<select id="eliteService" name="service" required>
+<option value="">Choose your project</option>
+<option>Luxury Pool Construction</option>
+<option>Custom Pool Design</option>
+<option>Pool Renovation</option>
+<option>Pool Maintenance</option>
+<option>Outdoor Living Design</option>
+</select>
+<label for="eliteMessage">Your Vision</label>
+<textarea id="eliteMessage" name="message" rows="4" placeholder="Describe your dream pool"></textarea>
+<button type="submit" class="gold-btn">SUBMIT ENQUIRY <i class="fa-solid fa-arrow-right"></i></button>
+<small class="form-note" id="eliteFormNote" aria-live="polite">Demo form — backend connection required to receive enquiries.</small>
+</form>
+</section>
+</main>
+<!-- FOOTER -->
+<footer>
+<div class="footer-container">
+<div class="footer-column">
+<div class="logo">
+<img src="images/Glossy Blue Pool House Emblem.png" alt="Bluewave Pools Logo">
+<div class="brand-text">
+<a href="eindex.html">
+<span class="brand-bluewave">Bluewave</span>
+<span class="brand-pools">Pools</span>
+</a>
+</div>
+</div>
+<p>Luxury Swimming Pool Design & Construction.</p>
+<p>Exceptional Spaces. Timeless Experiences.</p>
+<div class="social-links">
+<a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+<a href="https://x.com/" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+<a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+<a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+<a href="https://wa.me/917799629151" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+</div>
+</div>
+<div class="footer-column">
+<h3>Contact Us</h3>
+<p>Your Business Address</p>
+<p>+91 7799629151</p>
+<p>info@aqualifepools.com</p>
+<p>Mon - Sat: 9 AM - 6 PM</p>
+</div>
+<div class="footer-column">
+<h3>Explore</h3>
+<a href="index.html">Home – Premium</a>
+<a href="eindex.html">Home – Elite</a>
+<a href="#intro">About Us</a>
+<a href="#collection">Our Collection</a>
+</div>
+<div class="footer-column">
+<h3>Our Services</h3>
+<a href="#features">Pool Construction</a>
+<a href="#features">Luxury Pool Design</a>
+<a href="#features">Pool Renovation</a>
+<a href="#features">Pool Maintenance</a>
+</div>
+</div>
+<div class="copyright">
+<p>&copy; <span id="currentYear"></span> Bluewave Pools. All Rights Reserved.</p>
+<div class="legal-links">
+<a href="terms.html">Terms & Conditions</a>
+<a href="privacy.html">Privacy Policy</a>
+</div>
+</div>
+</footer>
+<script>
+
+/* CURRENT YEAR */
+
+document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+/* THEME TOGGLE */
+
+const themeMode = document.getElementById("themeMode");
+
+const themeIcon = themeMode.querySelector("i");
+
+themeMode.addEventListener("click", function () {
+
+    document.body.classList.toggle("light-mode");
+
+    const isLight = document.body.classList.contains("light-mode");
+
+    if (isLight) {
+
+        document.body.style.background = "#ffffff";
+
+        document.body.style.color = "#163653";
+
+        themeIcon.className = "fa-solid fa-moon";
+
+    } else {
+
+        document.body.style.background = "";
+
+        document.body.style.color = "";
+
+        themeIcon.className = "fa-solid fa-sun";
+
+    }
+
+});
+
+/* RTL TOGGLE */
+
+const rtlMode = document.getElementById("rtlMode");
+
+rtlMode.addEventListener("click", function () {
+
+    const isRTL = document.documentElement.dir !== "rtl";
+
+    document.documentElement.dir = isRTL ? "rtl" : "ltr";
+
+    rtlMode.classList.toggle("active", isRTL);
+
+});
+
+/* MOBILE MENU */
+
+const menuToggle = document.getElementById("menuToggle");
+
+const mainNav = document.getElementById("mainNav");
+
+menuToggle.addEventListener("click", function () {
+
+    const isOpen = mainNav.classList.toggle("show");
+
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+
+    menuToggle.innerHTML = isOpen
+
+        ? '<i class="fa-solid fa-xmark"></i>'
+
+        : '<i class="fa-solid fa-bars"></i>';
+
+});
+
+/* HOME DROPDOWN */
+
+const homeDropdown = document.getElementById("homeDropdown");
+
+const dropdownToggle = homeDropdown.querySelector(".dropdown-toggle");
+
+dropdownToggle.addEventListener("click", function (event) {
+
+    if (window.matchMedia("(max-width: 900px)").matches) {
+
+        event.preventDefault();
+
+        const isOpen = homeDropdown.classList.toggle("open");
+
+        dropdownToggle.setAttribute("aria-expanded", String(isOpen));
+
+    }
+
+});
+
+document.addEventListener("click", function (event) {
+
+    if (!homeDropdown.contains(event.target)) {
+
+        homeDropdown.classList.remove("open");
+
+        dropdownToggle.setAttribute("aria-expanded", "false");
+
+    }
+
+});
+
+/* CLOSE MOBILE MENU */
+
+mainNav.querySelectorAll("a:not(.dropdown-toggle)").forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        mainNav.classList.remove("show");
+
+        menuToggle.setAttribute("aria-expanded", "false");
+
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+
+    });
+
+});
+
+/* SCROLL ANIMATIONS */
+
+const revealItems = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window) {
+
+    const observer = new IntersectionObserver(function (entries, observer) {
+
+        entries.forEach(function (entry) {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("show");
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    }, {
+
+        threshold: 0.12
+
+    });
+
+    revealItems.forEach(function (item) {
+
+        observer.observe(item);
+
+    });
+
+} else {
+
+    revealItems.forEach(function (item) {
+
+        item.classList.add("show");
+
+    });
+
+}
+
+/* CONTACT FORM FRONTEND VALIDATION */
+
+const eliteForm = document.getElementById("eliteForm");
+
+const eliteFormNote = document.getElementById("eliteFormNote");
+
+eliteForm.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    if (!eliteForm.checkValidity()) {
+
+        eliteForm.reportValidity();
+
+        return;
+
+    }
+
+    eliteFormNote.textContent =
+
+        "Details validated. Connect a backend to receive this enquiry.";
+
+    eliteFormNote.style.color = "#087f45";
+
+    eliteForm.reset();
+
+});
+</script>
+</body>
+</html>
+
+ 

@@ -1,0 +1,1837 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bluewave Pools - Swimming pool design, installation, construction, renovation and maintenance.">
+<title>Bluewave Pools | Swimming Pool Design & Construction</title>
+ 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap%22 rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+ 
+<style>
+:root {
+    --blue: #008fe8;
+    --blue-dark: #006fbd;
+    --teal: #36c5c0;
+    --text: #163653;
+    --heading: #123957;
+    --muted: #536b80;
+    --page: #ffffff;
+    --card: #ffffff;
+    --section-alt: #f4f9fc;
+    --footer-bg: #eaf4fb;
+    --border: #d8e4ee;
+    --soft: #e5f5fb;
+    --header-height: 88px;
+    --shadow: 0 12px 35px rgba(15, 55, 80, .09);
+}
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+ 
+body {
+    font-family: "DM Sans", Arial, sans-serif;
+    color: var(--text);
+    background: var(--page);
+    line-height: 1.7;
+    overflow-x: hidden;
+    transition: background .3s, color .3s;
+}
+ 
+body.dark-mode {
+    --text: #e5f0f7;
+    --heading: #f2f8fc;
+    --muted: #a9bdcc;
+    --page: #0e1b26;
+    --card: #172936;
+    --section-alt: #122431;
+    --footer-bg: #091722;
+    --border: #2b4353;
+    --soft: #203d4c;
+    --shadow: 0 12px 35px rgba(0, 0, 0, .25);
+}
+ 
+a {
+    color: inherit;
+}
+ 
+button, input, select, textarea {
+    font: inherit;
+}
+ 
+img {
+    max-width: 100%;
+    display: block;
+}
+ 
+section {
+    scroll-margin-top: 100px;
+}
+ 
+.container {
+    width: min(1180px, 90%);
+    margin: auto;
+}
+ 
+/* HEADER */
+ 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: var(--header-height);
+    padding: 10px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    background: var(--card);
+    box-shadow: 0 3px 18px rgba(0,0,0,.07);
+    z-index: 1000;
+    transition: background .3s, box-shadow .3s;
+}
+ 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+ 
+.logo img {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+ 
+.brand-text a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.1;
+    display: flex;
+    flex-direction: column;
+}
+ 
+.brand-bluewave {
+    color: var(--blue);
+}
+ 
+.brand-pools {
+    color: #83e4d5;
+}
+ 
+nav {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+ 
+nav > a,
+.dropdown-toggle {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 700;
+    transition: color .25s;
+}
+ 
+nav > a:hover,
+.dropdown-toggle:hover {
+    color: var(--blue);
+}
+ 
+.dropdown {
+    position: relative;
+    padding: 12px 0;
+}
+ 
+.dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+}
+ 
+.dropdown-toggle i {
+    font-size: 10px;
+    transition: transform .3s;
+}
+ 
+.dropdown:hover .dropdown-toggle i,
+.dropdown.open .dropdown-toggle i {
+    transform: rotate(180deg);
+}
+ 
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    min-width: 190px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: .25s ease;
+}
+ 
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu,
+.dropdown.open .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+ 
+.dropdown-menu a {
+    padding: 10px 12px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 7px;
+    transition: .25s;
+}
+ 
+.dropdown-menu a:hover,
+.dropdown-menu a.active {
+    color: var(--blue);
+    background: var(--soft);
+}
+ 
+.display-options {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+ 
+.display-btn {
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: var(--card);
+    color: var(--text);
+    cursor: pointer;
+    transition: .25s;
+}
+ 
+.display-btn:hover,
+.display-btn.active {
+    background: var(--blue);
+    color: white;
+}
+ 
+.login-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: var(--blue);
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .3s;
+}
+ 
+.login-btn:hover {
+    background: var(--blue-dark);
+    transform: translateY(-2px);
+}
+ 
+.menu-toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--card);
+    color: var(--text);
+    cursor: pointer;
+    font-size: 19px;
+}
+ 
+/* COMMON */
+ 
+.section {
+    padding: 95px 7%;
+}
+ 
+.eyebrow {
+    display: inline-block;
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 13px;
+}
+ 
+.eyebrow.light {
+    color: var(--blue);
+}
+ 
+h1, h2, h3 {
+    color: var(--heading);
+}
+ 
+h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.2;
+    font-weight: 600;
+}
+ 
+h2 em {
+    color: var(--blue);
+}
+ 
+.section-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 38px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+ 
+.section-head p {
+    max-width: 400px;
+    color: var(--muted);
+    font-size: 14px;
+}
+ 
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 13px 25px;
+    background: var(--blue);
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    border: 1px solid var(--blue);
+    transition: .3s;
+}
+ 
+.btn:hover {
+    background: var(--blue-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(0,143,232,.22);
+}
+ 
+.btn.ghost {
+    color: white;
+    background: transparent;
+    border-color: rgba(255,255,255,.7);
+}
+ 
+.btn.ghost:hover {
+    background: white;
+    color: var(--blue-dark);
+}
+ 
+/* HERO */
+ 
+.hero {
+    min-height: 720px;
+    padding: 160px 8% 100px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: white;
+    overflow: hidden;
+    border-radius: 20px;
+    background:
+        linear-gradient(90deg, rgba(0,25,48,.88), rgba(0,45,70,.45), rgba(0,45,70,.12)),
+        url("https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=2000&q=85") center/cover no-repeat;
+}
+ 
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    right: -120px;
+    bottom: -200px;
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 50%;
+    box-shadow: 0 0 0 35px rgba(255,255,255,.04),
+                0 0 0 70px rgba(255,255,255,.03);
+}
+ 
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    animation: heroEnter 1s ease both;
+}
+ 
+.hero h1 {
+    color: white;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(48px, 7vw, 88px);
+    line-height: 1.08;
+    margin: 14px 0 22px;
+}
+ 
+.hero h1 em {
+    color: #83e5d6;
+}
+ 
+.hero-content > p {
+    max-width: 510px;
+    color: #e0edf2;
+    font-size: 16px;
+}
+ 
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+ 
+.proof {
+    display: flex;
+    flex-direction: column;
+    margin-top: 38px;
+    border-left: 3px solid #7ce0d1;
+    padding-left: 14px;
+}
+ 
+.proof strong {
+    font-size: 13px;
+    color: white;
+}
+ 
+.proof small {
+    color: #d1e3e9;
+    font-size: 11px;
+}
+ 
+/* SERVICES */
+ 
+.services-section {
+    background: var(--section-alt);
+}
+ 
+.services-heading {
+    text-align: center;
+    margin: 0 auto 42px;
+    max-width: 700px;
+}
+ 
+.services-heading p {
+    color: var(--muted);
+    margin-top: 12px;
+}
+ 
+.services {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+ 
+.service {
+    padding: 28px 23px;
+    min-height: 270px;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    background: var(--card);
+    transition: transform .35s, box-shadow .35s, border-color .35s;
+}
+ 
+.service:hover {
+    transform: translateY(-9px);
+    box-shadow: var(--shadow);
+    border-color: var(--blue);
+}
+ 
+.service.featured {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: white;
+}
+ 
+.number {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+}
+ 
+.featured .number {
+    color: #d9f5ff;
+}
+ 
+.symbol {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    background: var(--soft);
+    color: var(--blue);
+    font-size: 23px;
+    margin: 24px 0 18px;
+}
+ 
+.featured .symbol {
+    background: rgba(255,255,255,.2);
+    color: white;
+}
+ 
+.service h3 {
+    font-size: 17px;
+    margin-bottom: 9px;
+}
+ 
+.featured h3 {
+    color: white;
+}
+ 
+.service p {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 17px;
+}
+ 
+.featured p {
+    color: #e2f5ff;
+}
+ 
+.service > a {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 800;
+    text-decoration: none;
+}
+ 
+.featured > a {
+    color: white;
+}
+ 
+/* ABOUT */
+ 
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 8%;
+}
+ 
+.about-photo {
+    position: relative;
+}
+ 
+.about-photo img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 180px 180px 15px 15px;
+    box-shadow: var(--shadow);
+}
+ 
+.photo-tag {
+    position: absolute;
+    left: -18px;
+    bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+ 
+.photo-tag > span {
+    color: var(--blue);
+    font-size: 28px;
+}
+ 
+.photo-tag strong,
+.photo-tag small {
+    display: block;
+}
+ 
+.photo-tag strong {
+    font-size: 12px;
+    color: var(--heading);
+}
+ 
+.photo-tag small {
+    font-size: 10px;
+    color: var(--muted);
+}
+ 
+.about-content h2 {
+    margin-bottom: 20px;
+}
+ 
+.about-content p {
+    margin-top: 13px;
+    color: var(--muted);
+    font-size: 13px;
+}
+ 
+.about-content .lead {
+    font-size: 16px;
+    color: var(--heading);
+    font-weight: 700;
+}
+ 
+.benefits {
+    list-style: none;
+    display: grid;
+    gap: 14px;
+    margin: 25px 0;
+}
+ 
+.benefits li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
+ 
+.benefits li span {
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--soft);
+    color: var(--blue);
+}
+ 
+/* PROJECTS */
+ 
+.projects {
+    background: var(--section-alt);
+}
+ 
+.project-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 18px;
+}
+ 
+.project {
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #123344;
+}
+ 
+.project-large {
+    grid-row: span 2;
+    height: 578px;
+}
+ 
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s;
+}
+ 
+.project:hover img {
+    transform: scale(1.08);
+}
+ 
+.project::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(0,20,35,.85), transparent 70%);
+}
+ 
+.project-info {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    padding: 25px;
+    color: white;
+}
+ 
+.project-info small {
+    color: #9ee9df;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+}
+ 
+.project-info h3 {
+    color: white;
+    font-size: 21px;
+    margin-top: 7px;
+}
+ 
+/* PROCESS */
+ 
+.center-heading {
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto 45px;
+}
+ 
+.center-heading p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 12px;
+}
+ 
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--border);
+}
+ 
+.steps article {
+    padding: 25px 20px 10px;
+    border-right: 1px solid var(--border);
+    transition: background .3s;
+}
+ 
+.steps article:hover {
+    background: var(--section-alt);
+}
+ 
+.steps article:last-child {
+    border-right: 0;
+}
+ 
+.step-number {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--soft);
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+ 
+.steps h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+ 
+.steps p {
+    color: var(--muted);
+    font-size: 12px;
+}
+ 
+/* WHY CHOOSE US */
+ 
+.reasons {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 8%;
+    align-items: center;
+    background: var(--section-alt);
+}
+ 
+.reason-intro p {
+    max-width: 450px;
+    color: var(--muted);
+    font-size: 13px;
+    margin: 18px 0 25px;
+}
+ 
+.reason-list {
+    border-top: 1px solid var(--border);
+}
+ 
+.reason-list article {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 17px;
+    align-items: start;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+}
+ 
+.reason-icon {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: var(--soft);
+    color: var(--blue);
+    font-size: 19px;
+}
+ 
+.reason-list h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+ 
+.reason-list p {
+    color: var(--muted);
+    font-size: 12px;
+}
+ 
+/* CONTACT */
+ 
+.contact {
+    display: grid;
+    grid-template-columns: 1fr .85fr;
+    gap: 8%;
+    align-items: center;
+    padding: 95px 8%;
+    color: white;
+    background: linear-gradient(120deg, #07364b, #075b76);
+}
+ 
+.contact-content h2 {
+    color: white;
+    font-size: clamp(40px, 5vw, 65px);
+    margin-bottom: 20px;
+}
+ 
+.contact-content h2 em {
+    color: #7ce0d1;
+}
+ 
+.contact-content > p {
+    max-width: 430px;
+    color: #d0e5eb;
+    font-size: 13px;
+    margin-bottom: 27px;
+}
+ 
+.contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 17px;
+}
+ 
+.contact-detail > span {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #ffffff55;
+    border-radius: 11px;
+    color: #83e5d6;
+}
+ 
+.contact-detail small,
+.contact-detail strong {
+    display: block;
+}
+ 
+.contact-detail small {
+    color: #a8cbd4;
+    font-size: 9px;
+    letter-spacing: 1.3px;
+}
+ 
+.contact-detail strong {
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+}
+ 
+.contact-form {
+    padding: 30px;
+    border-radius: 17px;
+    background: #fff;
+    color: #123344;
+    box-shadow: 0 22px 65px rgba(0,0,0,.25);
+}
+ 
+.contact-form h3 {
+    color: #123344;
+    font-size: 22px;
+}
+ 
+.contact-form > p {
+    color: #70858e;
+    font-size: 11px;
+    margin: 7px 0 18px;
+}
+ 
+.contact-form label {
+    display: block;
+    color: #24465b;
+    font-size: 11px;
+    font-weight: 700;
+    margin: 13px 0 6px;
+}
+ 
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    min-height: 43px;
+    padding: 11px 12px;
+    border: 1px solid #dce7e8;
+    border-radius: 8px;
+    background: #f8fbfb;
+    color: #123344;
+    font-size: 12px;
+    outline: none;
+    transition: border-color .25s, box-shadow .25s;
+}
+ 
+.contact-form textarea {
+    resize: vertical;
+}
+ 
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(0,143,232,.12);
+}
+ 
+.submit {
+    width: 100%;
+    margin-top: 17px;
+    cursor: pointer;
+}
+ 
+.contact-form > small {
+    display: block;
+    color: #71858c;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 12px;
+}
+.service reveal{
+    border: 1px solid #83e4d5;
+}
+ 
+/* FOOTER */
+ 
+footer {
+    background: var(--footer-bg);
+    color: var(--text);
+    padding: 55px 7% 0;
+}
+ 
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.1fr;
+    gap: 35px;
+    padding-bottom: 38px;
+}
+ 
+.footer-column h3 {
+    color: var(--heading);
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+ 
+.footer-column p {
+    color: var(--muted);
+    font-size: 12px;
+    margin: 8px 0;
+}
+ 
+.footer-column > a {
+    display: block;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 12px;
+    margin-bottom: 10px;
+    transition: color .25s, transform .25s;
+}
+ 
+.footer-column > a:hover {
+    color: var(--blue);
+    transform: translateX(4px);
+}
+ 
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 17px;
+}
+ 
+.social-links a {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--blue);
+    color: white;
+    text-decoration: none;
+    transition: transform .3s, background .3s;
+}
+ 
+.social-links a:hover {
+    background: var(--blue-dark);
+    transform: translateY(-5px);
+}
+ 
+.copyright {
+    border-top: 1px solid var(--border);
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    color: var(--muted);
+    font-size: 11px;
+}
+ 
+.legal-links {
+    display: flex;
+    gap: 20px;
+}
+ 
+.legal-links a {
+    color: var(--muted);
+    text-decoration: none;
+}
+ 
+.legal-links a:hover {
+    color: var(--blue);
+}
+ 
+/* ANIMATIONS */
+ 
+@keyframes heroEnter {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ 
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity .75s ease, transform .75s ease;
+    border: 1px solid  #83e4d5;
+}
+ 
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+ 
+.service:nth-child(2),
+.steps article:nth-child(2) {
+    transition-delay: .08s;
+}
+ 
+.service:nth-child(3),
+.steps article:nth-child(3) {
+    transition-delay: .16s;
+}
+ 
+.service:nth-child(4),
+.steps article:nth-child(4) {
+    transition-delay: .24s;
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}
+ 
+/* RESPONSIVE */
+ 
+@media (max-width: 1100px) {
+    header {
+        padding-inline: 3%;
+    }
+ 
+    nav {
+        gap: 14px;
+    }
+ 
+    nav > a,
+    .dropdown-toggle {
+        font-size: 12px;
+    }
+ 
+    .display-options {
+        gap: 5px;
+    }
+ 
+    .login-btn {
+        padding: 9px 14px;
+    }
+}
+ 
+@media (max-width: 900px) {
+    header {
+        flex-wrap: wrap;
+    }
+ 
+    .menu-toggle {
+        display: grid;
+        place-items: center;
+        margin-left: auto;
+    }
+ 
+    nav {
+        display: none;
+        order: 5;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        padding: 12px 0;
+        border-top: 1px solid var(--border);
+    }
+ 
+    nav.show {
+        display: flex;
+    }
+ 
+    nav > a,
+    .dropdown-toggle {
+        display: flex;
+        width: 100%;
+        padding: 10px 5px;
+        font-size: 14px;
+    }
+ 
+    .dropdown {
+        width: 100%;
+        padding: 0;
+    }
+ 
+    .dropdown-menu {
+        position: static;
+        display: none;
+        width: 100%;
+        margin-top: 5px;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+ 
+    .dropdown.open .dropdown-menu {
+        display: flex;
+    }
+ 
+    .display-options {
+        order: 4;
+    }
+ 
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+ 
+    .about,
+    .reasons,
+    .contact {
+        grid-template-columns: 1fr;
+    }
+ 
+    .about-photo {
+        max-width: 600px;
+        margin: auto;
+    }
+ 
+    .contact {
+        gap: 40px;
+    }
+ 
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+ 
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+ 
+    .steps article:nth-child(2) {
+        border-right: 0;
+    }
+ 
+    .steps article:nth-child(n+3) {
+        border-top: 1px solid var(--border);
+    }
+}
+ 
+@media (max-width: 600px) {
+    :root {
+        --header-height: 75px;
+    }
+ 
+    header {
+        min-height: 75px;
+        padding: 8px 5%;
+        gap: 8px;
+    }
+ 
+    .logo img {
+        width: 48px;
+        height: 48px;
+    }
+ 
+    .brand-text a {
+        font-size: 19px;
+    }
+ 
+    .display-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 12px;
+    }
+ 
+    .login-btn {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+ 
+    .hero {
+        min-height: 650px;
+        padding: 150px 7% 75px;
+        background-position: 58% center;
+    }
+ 
+    .hero h1 {
+        font-size: clamp(43px, 12vw, 62px);
+        letter-spacing: -1px;
+    }
+ 
+    .hero-content > p {
+        font-size: 14px;
+    }
+ 
+    .section {
+        padding: 70px 6%;
+    }
+ 
+    .section-head {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+ 
+    .services {
+        grid-template-columns: 1fr;
+    }
+ 
+    .service {
+        min-height: auto;
+    }
+ 
+    .about-photo img {
+        height: 370px;
+        border-radius: 120px 120px 12px 12px;
+    }
+ 
+    .photo-tag {
+        left: 5px;
+        bottom: 12px;
+    }
+ 
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+ 
+    .project,
+    .project-large {
+        height: 280px;
+        grid-row: auto;
+    }
+ 
+    .steps {
+        grid-template-columns: 1fr;
+    }
+ 
+    .steps article,
+    .steps article + article {
+        padding: 22px 10px;
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+        border-top: 0;
+    }
+ 
+    .steps article:last-child {
+        border-bottom: 0;
+    }
+ 
+    .contact {
+        padding: 70px 6%;
+    }
+ 
+    .contact-form {
+        padding: 22px;
+    }
+ 
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+ 
+    .copyright {
+        flex-direction: column;
+        text-align: center;
+    }
+ 
+    .legal-links {
+        justify-content: center;
+    }
+}
+</style>
+</head>
+ 
+<body>
+ 
+<header>
+    <div class="logo">
+        <img src="images/Glossy Blue Pool House Emblem.png" alt="Bluewave Pools Logo">
+        <div class="brand-text">
+            <a href="index.html">
+                <span class="brand-bluewave">Bluewave</span>
+                <span class="brand-pools">Pools</span>
+            </a>
+        </div>
+    </div>
+ 
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+ 
+    <nav id="mainNav">
+        <div class="dropdown" id="homeDropdown">
+            <a href="index.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                Home <i class="fa-solid fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+                <a href="index1.html" class="active">Home – Premium</a>
+                <a href="eindex1.html" class="active">Home – Elite</a>
+            </div>
+        </div>
+ 
+        <a href="about1.html">About Us</a>
+        <a href="services1.html">Services</a>
+        <a href="blog1.html">Blog</a>
+        <a href="contact1.html">Contact</a>
+        <a href="dashboard1.html">Dashboard</a>
+    </nav>
+ 
+    <div class="display-options">
+        <button type="button" id="rtlMode" class="display-btn" aria-label="Toggle text direction" title="Switch to RTL" style="border: 1px solid #83e4d5;">RTL</button>
+        <button type="button" id="themeMode" class="display-btn" aria-label="Switch to dark mode" title="Dark mode" style="border: 1px solid #83e4d5;">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="login.html" class="login-btn">Login</i></a>
+    </div>
+</header>
+ 
+<main>
+ 
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="eyebrow light">POOL DESIGN · BUILD · ENJOY</span>
+            <h1>Your own piece<br>of <em>paradise.</em></h1>
+            <p>Beautifully crafted swimming pools, made for slow mornings, sunny afternoons and memories that last.</p>
+ 
+            <div class="hero-buttons">
+                <a href="#contact" class="btn" style="border-color: #83e4d5;">Start Your Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="#projects" class="btn ghost" style="border-color: #83e4d5;">Explore Our Work <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+ 
+            <div class="proof">
+                <strong>Designed around you</strong>
+                <small>Thoughtful design. Lasting quality.</small>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- SERVICES SECTION -->
+    <section class="section services-section" id="services">
+        <div class="services-heading reveal">
+            <span class="eyebrow">WHAT WE DO</span>
+            <h2>Everything your pool needs<br>to <em>come to life.</em></h2>
+            <p>From the first design idea to the final finishing touches, we help shape your ideal pool space.</p>
+        </div>
+ 
+        <div class="services">
+            <article class="service reveal">
+                <span class="number">01 / BUILD</span>
+                <div class="symbol"><i class="fa-solid fa-person-swimming"></i></div>
+                <h3>Pool Construction</h3>
+                <p>Custom-built pools designed for your space and lifestyle.</p>
+                <a href="#contact">Explore service ↗</a>
+            </article>
+ 
+            <article class="service reveal">
+                <span class="number">02 / DESIGN</span>
+                <div class="symbol"><i class="fa-solid fa-pen-ruler"></i></div>
+                <h3>Pool Design</h3>
+                <p>Beautiful layouts and finishes that feel unmistakably yours.</p>
+                <a href="#contact">Explore service ↗</a>
+            </article>
+ 
+            <article class="service reveal">
+                <span class="number">03 / REFRESH</span>
+                <div class="symbol"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <h3>Renovation</h3>
+                <p>Give your existing pool a fresh look with modern upgrades.</p>
+                <a href="#contact">Explore service ↗</a>
+            </article>
+ 
+            <article class="service reveal">
+                <span class="number">04 / CARE</span>
+                <div class="symbol"><i class="fa-solid fa-water"></i></div>
+                <h3>Maintenance</h3>
+                <p>Reliable care to keep your pool clean, clear and ready.</p>
+                <a href="#contact">Explore service ↗</a>
+            </article>
+        </div>
+    </section>
+ 
+    <!-- ABOUT SECTION -->
+    <section class="section about" id="about">
+        <div class="about-photo reveal">
+            <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1000&q=85"
+                 alt="Beautiful modern swimming pool" loading="lazy">
+            <div class="photo-tag">
+                <span>✳</span>
+                <div>
+                    <strong>Designed with intention</strong>
+                    <small>Built to be enjoyed for years</small>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="about-content reveal">
+            <span class="eyebrow">A LITTLE ABOUT US</span>
+            <h2>More than a pool.<br><em>A better way to unwind.</em></h2>
+            <p class="lead">We believe a great pool changes how a space feels and how you spend your time in it.</p>
+            <p>Our team brings thoughtful planning, careful craftsmanship and clear communication to every project. We listen first, design around your needs and work to make the journey easier.</p>
+ 
+            <ul class="benefits">
+                <li><span>✓</span> Made for your space — personalised designs, never one-size-fits-all.</li>
+                <li><span>✓</span> Quality in every detail — materials and finishes chosen with care.</li>
+            </ul>
+ 
+            <a href="#contact" class="btn">Get to Know Us ↗</a>
+        </div>
+    </section>
+ 
+    <!-- PROJECTS SECTION -->
+    <section class="section projects" id="projects">
+        <div class="section-head reveal">
+            <div>
+                <span class="eyebrow">SELECTED WORK</span>
+                <h2>Spaces made for<br><em>making a splash.</em></h2>
+            </div>
+            <p>Explore pool inspiration for beautiful homes, outdoor spaces and relaxing retreats.</p>
+        </div>
+ 
+        <div class="project-grid">
+            <article class="project project-large reveal">
+                <img src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=1300&q=85"
+                     alt="Contemporary outdoor swimming pool" loading="lazy">
+                <div class="project-info">
+                    <small>RESIDENTIAL · DESIGN & BUILD</small>
+                    <h3>The Courtyard Escape</h3>
+                </div>
+            </article>
+ 
+            <article class="project reveal">
+                <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1000&q=85"
+                     alt="Relaxing poolside retreat" loading="lazy">
+                <div class="project-info">
+                    <small>PRIVATE HOME · NEW BUILD</small>
+                    <h3>The Quiet Retreat</h3>
+                </div>
+            </article>
+ 
+            <article class="project reveal">
+                <img src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=1000&q=85"
+                     alt="Blue swimming pool water" loading="lazy">
+                <div class="project-info">
+                    <small>POOL UPGRADE · RENOVATION</small>
+                    <h3>Fresh Blue Living</h3>
+                </div>
+            </article>
+        </div>
+    </section>
+ 
+    <!-- PROCESS SECTION -->
+    <section class="section process" id="process">
+        <div class="center-heading reveal">
+            <span class="eyebrow">THE JOURNEY</span>
+            <h2>Simple steps. <em>Beautiful results.</em></h2>
+            <p>We keep the process clear, collaborative and focused on your project.</p>
+        </div>
+ 
+        <div class="steps">
+            <article class="reveal">
+                <span class="step-number">01</span>
+                <h3>Let's Talk</h3>
+                <p>Tell us about your space, ideas, needs and budget.</p>
+            </article>
+            <article class="reveal">
+                <span class="step-number">02</span>
+                <h3>Plan the Details</h3>
+                <p>We develop your design and discuss the project plan.</p>
+            </article>
+            <article class="reveal">
+                <span class="step-number">03</span>
+                <h3>Build with Care</h3>
+                <p>Our team brings the plan to life with careful workmanship.</p>
+            </article>
+            <article class="reveal">
+                <span class="step-number">04</span>
+                <h3>Make a Splash</h3>
+                <p>Enjoy your finished pool and your everyday escape.</p>
+            </article>
+        </div>
+    </section>
+ 
+    <!-- WHY CHOOSE US -->
+    <section class="section reasons" id="why-us">
+        <div class="reason-intro reveal">
+            <span class="eyebrow">THE DIFFERENCE</span>
+            <h2>Good work is in<br>the <em>details.</em></h2>
+            <p>Building a pool is a big decision. We make it easier with thoughtful guidance, honest communication and a focus on quality.</p>
+            <a href="#contact" class="btn">Work With Us ↗</a>
+        </div>
+ 
+        <div class="reason-list">
+            <article class="reveal">
+                <span class="reason-icon"><i class="fa-solid fa-compass-drafting"></i></span>
+                <div>
+                    <h3>Thoughtful by Design</h3>
+                    <p>Every choice considers your lifestyle, property and vision.</p>
+                </div>
+            </article>
+            <article class="reveal">
+                <span class="reason-icon"><i class="fa-solid fa-helmet-safety"></i></span>
+                <div>
+                    <h3>Craftsmanship That Lasts</h3>
+                    <p>We value careful preparation, quality materials and detail.</p>
+                </div>
+            </article>
+            <article class="reveal">
+                <span class="reason-icon"><i class="fa-solid fa-comments"></i></span>
+                <div>
+                    <h3>People-First Service</h3>
+                    <p>Clear updates and a collaborative approach from start to finish.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+ 
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="contact-content reveal">
+            <span class="eyebrow light">YOUR NEXT CHAPTER STARTS HERE</span>
+            <h2>Let's make room<br>for <em>more summer.</em></h2>
+            <p>Tell us about your dream pool. Let's talk about the next steps.</p>
+ 
+            <div class="contact-detail">
+                <span><i class="fa-regular fa-envelope"></i></span>
+                <div>
+                    <small>EMAIL US</small>
+                    <strong>info@aqualifepools.com</strong>
+                </div>
+            </div>
+ 
+            <div class="contact-detail">
+                <span><i class="fa-solid fa-phone"></i></span>
+                <div>
+                    <small>CALL US</small>
+                    <strong>+91 7799629151</strong>
+                </div>
+            </div>
+ 
+            <div class="contact-detail">
+                <span><i class="fa-solid fa-location-dot"></i></span>
+                <div>
+                    <small>LOCATION</small>
+                    <strong>Your service area</strong>
+                </div>
+            </div>
+        </div>
+ 
+        <form class="contact-form reveal" id="quoteForm">
+            <h3>Tell Us About Your Project</h3>
+            <p>Fill in your details and we'll be in touch.</p>
+ 
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required>
+ 
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+ 
+            <label for="service">Choose a Service</label>
+            <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option>Pool Construction</option>
+                <option>Pool Design</option>
+                <option>Renovation</option>
+                <option>Maintenance</option>
+            </select>
+ 
+            <label for="message">Project Details</label>
+            <textarea id="message" name="message" rows="3" placeholder="Tell us about your project"></textarea>
+ 
+            <button type="submit" class="btn submit">Send Enquiry ↗</button>
+            <small id="formNote" aria-live="polite">Demo form — backend connection required to receive enquiries.</small>
+        </form>
+    </section>
+ 
+</main>
+ 
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+ 
+        <div class="footer-column">
+            <div class="logo">
+                <img src="images/Glossy Blue Pool House Emblem.png" alt="Bluewave Pools Logo">
+                <div class="brand-text">
+                    <a href="index.html">
+                        <span class="brand-bluewave">Bluewave</span>
+                        <span class="brand-pools">Pools</span>
+                    </a>
+                </div>
+            </div>
+            <p>Swimming Pool Installation & Construction Company.</p>
+            <p>Quality Pools. Lasting Impressions.</p>
+ 
+            <div class="social-links">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://wa.me/917799629151" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+ 
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <p>Your Business Address</p>
+            <p>+91 7799629151</p>
+            <p>✉ info@aqualifepools.com</p>
+            <p>Mon - Sat: 9 AM - 6 PM</p>
+        </div>
+ 
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Our Services</a>
+            <a href="#projects">Our Projects</a>
+        </div>
+ 
+        <div class="footer-column">
+            <h3>Our Services</h3>
+            <a href="#services">Pool Installation</a>
+            <a href="#services">Pool Construction</a>
+            <a href="#services">Pool Renovation</a>
+            <a href="#services">Pool Maintenance</a>
+        </div>
+ 
+    </div>
+ 
+    <div class="copyright">
+        <p>&copy; <span id="currentYear"></span> Bluewave Pools. All Rights Reserved.</p>
+        <div class="legal-links">
+            <a href="terms.html">Terms &amp; Conditions</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+    </div>
+</footer>
+ 
+<script>
+/* CURRENT YEAR */
+document.getElementById("currentYear").textContent = new Date().getFullYear();
+ 
+/* DARK / LIGHT MODE */
+const themeMode = document.getElementById("themeMode");
+const themeIcon = themeMode.querySelector("i");
+ 
+try {
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+        themeIcon.className = "fa-solid fa-sun";
+        themeMode.title = "Light mode";
+    }
+} catch (error) {}
+ 
+themeMode.addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
+ 
+    const isDark = document.body.classList.contains("dark-mode");
+ 
+    themeIcon.className = isDark
+        ? "fa-solid fa-sun"
+        : "fa-solid fa-moon";
+ 
+    themeMode.title = isDark ? "Light mode" : "Dark mode";
+ 
+    try {
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+    } catch (error) {}
+});
+ 
+/* RTL MODE */
+const rtlMode = document.getElementById("rtlMode");
+ 
+try {
+    if (localStorage.getItem("dir") === "rtl") {
+        document.documentElement.dir = "rtl";
+        rtlMode.classList.add("active");
+        rtlMode.title = "Switch to LTR";
+    }
+} catch (error) {}
+ 
+rtlMode.addEventListener("click", function () {
+    const isRTL = document.documentElement.dir !== "rtl";
+ 
+    document.documentElement.dir = isRTL ? "rtl" : "ltr";
+    rtlMode.classList.toggle("active", isRTL);
+    rtlMode.title = isRTL ? "Switch to LTR" : "Switch to RTL";
+ 
+    try {
+        localStorage.setItem("dir", isRTL ? "rtl" : "ltr");
+    } catch (error) {}
+});
+ 
+/* MOBILE NAVIGATION */
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
+ 
+menuToggle.addEventListener("click", function () {
+    const isOpen = mainNav.classList.toggle("show");
+ 
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.innerHTML = isOpen
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
+});
+ 
+/* HOME DROPDOWN */
+const homeDropdown = document.getElementById("homeDropdown");
+const dropdownToggle = homeDropdown.querySelector(".dropdown-toggle");
+ 
+dropdownToggle.addEventListener("click", function (event) {
+    if (window.matchMedia("(max-width: 900px)").matches) {
+        event.preventDefault();
+ 
+        const isOpen = homeDropdown.classList.toggle("open");
+        dropdownToggle.setAttribute("aria-expanded", String(isOpen));
+    }
+});
+ 
+document.addEventListener("click", function (event) {
+    if (!homeDropdown.contains(event.target)) {
+        homeDropdown.classList.remove("open");
+        dropdownToggle.setAttribute("aria-expanded", "false");
+    }
+});
+ 
+/* CLOSE MOBILE MENU AFTER NAVIGATION */
+mainNav.querySelectorAll("a:not(.dropdown-toggle)").forEach(function (link) {
+    link.addEventListener("click", function () {
+        mainNav.classList.remove("show");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    });
+});
+ 
+/* SCROLL REVEAL ANIMATION */
+const revealItems = document.querySelectorAll(".reveal");
+ 
+if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.12
+    });
+ 
+    revealItems.forEach(function (item) {
+        revealObserver.observe(item);
+    });
+} else {
+    revealItems.forEach(function (item) {
+        item.classList.add("show");
+    });
+}
+ 
+/* FRONTEND FORM VALIDATION */
+const quoteForm = document.getElementById("quoteForm");
+const formNote = document.getElementById("formNote");
+ 
+quoteForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+ 
+    if (!quoteForm.checkValidity()) {
+        quoteForm.reportValidity();
+        return;
+    }
+ 
+    formNote.textContent =
+        "Your details are valid. Connect a backend to receive and store this enquiry.";
+ 
+    formNote.style.color = "#087f45";
+    quoteForm.reset();
+});
+</script>
+ 
+</body>
+</html>
+ 
+ 
+ 

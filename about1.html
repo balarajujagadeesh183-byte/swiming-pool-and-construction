@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Discover Bluewave Pools, our story, vision, values and commitment to exceptional swimming pool design and construction.">
+<title>About Us | Bluewave Pools</title>
+ 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap%22 rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+ 
+<style>
+:root {
+    --blue: #008fe8;
+    --blue-dark: #006fbd;
+    --gold: #d5b16d;
+    --navy: #071d2b;
+    --navy-light: #102e40;
+    --text: #17364c;
+    --heading: #10334c;
+    --muted: #647989;
+    --page: #ffffff;
+    --card: #ffffff;
+    --soft: #f1f7fa;
+    --border: #dce7ed;
+    --footer: #eaf3f8;
+}
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+ 
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--page);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+    transition: background .3s, color .3s;
+}
+ 
+body.dark-mode {
+    --page: #0b1923;
+    --card: #132936;
+    --text: #e4edf2;
+    --heading: #f2f7fa;
+    --muted: #a7bac6;
+    --soft: #122b39;
+    --border: #2a414e;
+    --footer: #07131d;
+}
+ 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+ 
+img {
+    display: block;
+    max-width: 100%;
+}
+ 
+button, input, textarea, select {
+    font: inherit;
+}
+ 
+section {
+    scroll-margin-top: 100px;
+}
+ 
+/* HEADER */
+ 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    min-height: 85px;
+    padding: 10px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: var(--card);
+    box-shadow: 0 3px 18px rgba(0,0,0,.07);
+    transition: background .3s;
+}
+ 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+ 
+.logo img {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+ 
+.brand-text a {
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+ 
+.brand-bluewave {
+    color: var(--blue);
+}
+ 
+.brand-pools {
+    color: #83e4d5;
+}
+ 
+nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+ 
+nav > a,
+.dropdown-toggle {
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 700;
+    transition: color .3s;
+}
+ 
+nav > a:hover,
+.dropdown-toggle:hover {
+    color: var(--blue);
+}
+ 
+nav > a.active {
+    color: var(--blue);
+}
+ 
+.dropdown {
+    position: relative;
+    padding: 12px 0;
+}
+ 
+.dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+ 
+.dropdown-toggle i {
+    font-size: 10px;
+    transition: transform .3s;
+}
+ 
+.dropdown:hover .dropdown-toggle i,
+.dropdown.open .dropdown-toggle i {
+    transform: rotate(180deg);
+}
+ 
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    min-width: 190px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.12);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: .25s;
+}
+ 
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu,
+.dropdown.open .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+ 
+.dropdown-menu a {
+    padding: 10px;
+    border-radius: 7px;
+    font-size: 12px;
+    color: var(--text);
+}
+ 
+.dropdown-menu a:hover {
+    background: var(--soft);
+    color: var(--blue);
+}
+ 
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+ 
+.display-btn {
+    width: 37px;
+    height: 37px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: var(--card);
+    color: var(--text);
+    cursor: pointer;
+    transition: .3s;
+    border: 1px solid  #83e4d5;
+}
+ 
+.display-btn:hover,
+.display-btn.active {
+    background: var(--blue);
+    color: white;
+}
+ 
+.login-btn {
+    padding: 10px 18px;
+    border-radius: 30px;
+    background: var(--blue);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    transition: .3s;
+}
+ 
+.login-btn:hover {
+    background: var(--blue-dark);
+    transform: translateY(-2px);
+}
+ 
+.menu-toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--card);
+    color: var(--text);
+    cursor: pointer;
+}
+ 
+/* COMMON */
+ 
+.container {
+    width: min(1180px, 90%);
+    margin: auto;
+}
+ 
+.section {
+    padding: 95px 7%;
+}
+ 
+.eyebrow {
+    display: inline-block;
+    color: var(--blue);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    margin-bottom: 14px;
+}
+ 
+h1, h2, h3 {
+    color: var(--heading);
+}
+ 
+h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(34px, 4vw, 50px);
+    font-weight: 600;
+    line-height: 1.2;
+}
+ 
+h2 em {
+    color: var(--blue);
+}
+ 
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 13px 24px;
+    border: 1px solid var(--blue);
+    border-radius: 30px;
+    background: var(--blue);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    transition: .3s;
+}
+ 
+.btn:hover {
+    background: var(--blue-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0,143,232,.2);
+}
+ 
+/* HERO */
+ 
+.hero {
+    min-height: 570px;
+    padding: 155px 8% 90px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: white;
+    background:
+        linear-gradient(90deg, rgba(2,23,38,.9), rgba(2,35,55,.55), rgba(2,35,55,.15)),
+        url("https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=2000&q=85") center/cover no-repeat;
+}
+ 
+.hero-content {
+    max-width: 690px;
+    position: relative;
+    z-index: 1;
+    animation: heroEnter .9s ease both;
+}
+ 
+.hero .eyebrow {
+    color: #8be4d7;
+}
+ 
+.hero h1 {
+    color: white;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 1.1;
+    margin: 15px 0 20px;
+}
+ 
+.hero h1 em {
+    color: #83e4d5;
+}
+ 
+.hero p {
+    color: #dbe8ed;
+    max-width: 510px;
+    font-size: 14px;
+}
+ 
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+ 
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 13px 24px;
+    border: 1px solid white;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    transition: .3s;
+}
+ 
+.btn-outline:hover {
+    background: white;
+    color: var(--navy);
+}
+ 
+/* STORY */
+ 
+.story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 8%;
+}
+ 
+.story-image {
+    position: relative;
+}
+ 
+.story-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+ 
+.story-image::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: 15px;
+    bottom: 15px;
+    border: 1px solid var(--blue);
+    border-radius: 12px;
+    z-index: -1;
+}
+ 
+.story-content p {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 17px 0;
+}
+ 
+.story-content .lead {
+    font-size: 16px;
+    color: var(--heading);
+    font-weight: 700;
+}
+ 
+.story-highlight {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    margin: 25px 0;
+    padding: 17px;
+    border-left: 3px solid var(--blue);
+    background: var(--soft);
+}
+ 
+.story-highlight i {
+    color: var(--blue);
+    font-size: 21px;
+}
+ 
+.story-highlight p {
+    margin: 0;
+    font-size: 12px;
+}
+ 
+/* VALUES */
+ 
+.values {
+    background: var(--soft);
+}
+ 
+.section-heading {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 45px;
+}
+ 
+.section-heading p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 14px;
+}
+ 
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+ 
+.value-card {
+    padding: 30px 25px;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    background: var(--card);
+    transition: .35s;
+}
+ 
+.value-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--blue);
+    box-shadow: 0 15px 35px rgba(10,50,70,.1);
+}
+ 
+.value-icon {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    background: var(--soft);
+    border-radius: 13px;
+    color: var(--blue);
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+ 
+.value-card h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+ 
+.value-card p {
+    color: var(--muted);
+    font-size: 12px;
+}
+ 
+/* MISSION AND VISION */
+ 
+.mission {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+ 
+.mission-card {
+    position: relative;
+    min-height: 300px;
+    padding: 42px 35px;
+    overflow: hidden;
+    background: var(--navy);
+    color: white;
+    border-radius: 13px;
+}
+ 
+.mission-card:nth-child(2) {
+    background: #07577b;
+}
+ 
+.mission-card > i {
+    color: var(--gold);
+    font-size: 31px;
+    margin-bottom: 22px;
+}
+ 
+.mission-card h3 {
+    color: white;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 28px;
+    margin-bottom: 14px;
+}
+ 
+.mission-card p {
+    color: #d2e0e7;
+    font-size: 13px;
+    max-width: 450px;
+}
+ 
+.mission-card::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 50%;
+    right: -65px;
+    bottom: -90px;
+    box-shadow: 0 0 0 25px rgba(255,255,255,.03);
+}
+ 
+/* WHY US */
+ 
+.why-us {
+    background: var(--soft);
+}
+ 
+.why-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 8%;
+}
+ 
+.why-image img {
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+    border-radius: 13px;
+}
+ 
+.why-list {
+    display: grid;
+    gap: 22px;
+    margin-top: 27px;
+}
+ 
+.why-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+ 
+.why-item > span {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--card);
+    color: var(--blue);
+}
+ 
+.why-item h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+ 
+.why-item p {
+    color: var(--muted);
+    font-size: 12px;
+}
+ 
+/* PROCESS */
+ 
+.process {
+    background: var(--navy);
+}
+ 
+.process h2 {
+    color: white;
+}
+ 
+.process .section-heading p {
+    color: #b7c8d0;
+}
+ 
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid rgba(255,255,255,.2);
+}
+ 
+.process-card {
+    padding: 28px 20px;
+    border-right: 1px solid rgba(255,255,255,.2);
+    transition: .3s;
+}
+ 
+.process-card:hover {
+    background: rgba(255,255,255,.04);
+}
+ 
+.process-card:last-child {
+    border-right: 0;
+}
+ 
+.process-number {
+    color: var(--gold);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 42px;
+}
+ 
+.process-card h3 {
+    color: white;
+    font-size: 16px;
+    margin: 12px 0;
+}
+ 
+.process-card p {
+    color: #b7c8d0;
+    font-size: 12px;
+}
+ 
+/* GALLERY */
+ 
+.gallery {
+    background: var(--page);
+}
+ 
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    grid-template-rows: 220px 220px;
+    gap: 15px;
+}
+ 
+.gallery-item {
+    overflow: hidden;
+    border-radius: 11px;
+}
+ 
+.gallery-item:first-child {
+    grid-row: span 2;
+}
+ 
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s;
+}
+ 
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+ 
+/* FAQ */
+ 
+.faq {
+    background: var(--soft);
+}
+ 
+.faq-container {
+    max-width: 850px;
+    margin: auto;
+}
+ 
+.faq-item {
+    border-bottom: 1px solid var(--border);
+}
+ 
+.faq-question {
+    width: 100%;
+    padding: 20px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    border: 0;
+    background: transparent;
+    color: var(--heading);
+    text-align: left;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+ 
+.faq-question i {
+    color: var(--blue);
+    transition: transform .3s;
+}
+ 
+.faq-item.open .faq-question i {
+    transform: rotate(45deg);
+}
+ 
+.faq-answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows .3s ease;
+}
+ 
+.faq-answer > div {
+    overflow: hidden;
+}
+ 
+.faq-answer p {
+    color: var(--muted);
+    font-size: 12px;
+    padding: 0 5px 18px;
+}
+ 
+.faq-item.open .faq-answer {
+    grid-template-rows: 1fr;
+}
+ 
+/* CTA */
+ 
+.cta {
+    padding: 90px 7%;
+    text-align: center;
+    color: white;
+    background:
+        linear-gradient(rgba(3,35,54,.88), rgba(3,35,54,.88)),
+        url("https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=1800&q=85") center/cover;
+}
+ 
+.cta h2 {
+    color: white;
+    margin-bottom: 17px;
+}
+ 
+.cta h2 em {
+    color: #8be4d7;
+}
+ 
+.cta p {
+    color: #d3e2e8;
+    max-width: 580px;
+    margin: 0 auto 26px;
+    font-size: 13px;
+}
+ 
+/* FOOTER */
+ 
+footer {
+    padding: 55px 7% 0;
+    background: var(--footer);
+    color: var(--text);
+}
+ 
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.1fr;
+    gap: 30px;
+    padding-bottom: 38px;
+}
+ 
+.footer-column h3 {
+    color: var(--heading);
+    font-size: 17px;
+    margin-bottom: 16px;
+}
+ 
+.footer-column p {
+    color: var(--muted);
+    font-size: 11px;
+    margin: 8px 0;
+}
+ 
+.footer-column > a {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+    margin-bottom: 10px;
+    transition: .25s;
+}
+ 
+.footer-column > a:hover {
+    color: var(--blue);
+    transform: translateX(4px);
+}
+ 
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 17px;
+}
+ 
+.social-links a {
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--blue);
+    color: white;
+    transition: .3s;
+}
+ 
+.social-links a:hover {
+    background: var(--blue-dark);
+    transform: translateY(-4px);
+}
+ 
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 18px 0;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 10px;
+}
+ 
+.legal-links {
+    display: flex;
+    gap: 20px;
+}
+ 
+.legal-links a:hover {
+    color: var(--blue);
+}
+ 
+/* ANIMATIONS */
+ 
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .75s ease, transform .75s ease;
+}
+ 
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+ 
+@keyframes heroEnter {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+ 
+/* RESPONSIVE */
+ 
+@media (max-width: 1100px) {
+    nav {
+        gap: 13px;
+    }
+ 
+    nav > a,
+    .dropdown-toggle {
+        font-size: 11px;
+    }
+ 
+    .login-btn {
+        padding: 9px 12px;
+    }
+}
+ 
+@media (max-width: 900px) {
+    header {
+        flex-wrap: wrap;
+    }
+ 
+    .menu-toggle {
+        display: grid;
+        place-items: center;
+        margin-left: auto;
+    }
+ 
+    nav {
+        display: none;
+        order: 5;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 3px;
+        padding: 12px 0;
+        border-top: 1px solid var(--border);
+    }
+ 
+    nav.show {
+        display: flex;
+    }
+ 
+    nav > a,
+    .dropdown-toggle {
+        display: flex;
+        width: 100%;
+        padding: 10px 5px;
+        font-size: 13px;
+    }
+ 
+    .dropdown {
+        padding: 0;
+    }
+ 
+    .dropdown-menu {
+        position: static;
+        display: none;
+        width: 100%;
+        margin-top: 5px;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+    }
+ 
+    .dropdown.open .dropdown-menu {
+        display: flex;
+    }
+ 
+    .story,
+    .why-layout {
+        grid-template-columns: 1fr;
+    }
+ 
+    .value-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+ 
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+ 
+    .process-card:nth-child(2) {
+        border-right: 0;
+    }
+ 
+    .process-card:nth-child(n+3) {
+        border-top: 1px solid rgba(255,255,255,.2);
+    }
+ 
+    .mission {
+        grid-template-columns: 1fr;
+    }
+ 
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+ 
+@media (max-width: 600px) {
+    header {
+        min-height: 75px;
+        padding: 8px 5%;
+        gap: 8px;
+    }
+ 
+    .logo img {
+        width: 47px;
+        height: 47px;
+    }
+ 
+    .brand-text a {
+        font-size: 18px;
+    }
+ 
+    .display-btn {
+        width: 33px;
+        height: 33px;
+        font-size: 11px;
+        border: 1px solid  #83e4d5;
+    }
+ 
+    .login-btn {
+        padding: 8px 10px;
+        font-size: 10px;
+    }
+ 
+    .hero {
+        min-height: 600px;
+        padding: 145px 7% 80px;
+        background-position: 60% center;
+    }
+ 
+    .hero h1 {
+        font-size: clamp(43px, 12vw, 62px);
+    }
+ 
+    .section {
+        padding: 70px 6%;
+    }
+ 
+    .story-image img,
+    .why-image img {
+        height: 340px;
+    }
+ 
+    .value-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+ 
+    .process-card,
+    .process-card:nth-child(n) {
+        border-right: 0;
+        border-top: 1px solid rgba(255,255,255,.2);
+    }
+ 
+    .process-card:first-child {
+        border-top: 0;
+    }
+ 
+    .mission-card {
+        padding: 30px 25px;
+        min-height: 260px;
+    }
+ 
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 220px);
+    }
+ 
+    .gallery-item:first-child {
+        grid-row: auto;
+    }
+ 
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+ 
+    .copyright {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+</style>
+</head>
+ 
+<body>
+ 
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <img src="images/Glossy Blue Pool House Emblem.png" alt="Bluewave Pools Logo">
+        <div class="brand-text">
+            <a href="index.html">
+                <span class="brand-bluewave">Bluewave</span>
+                <span class="brand-pools">Pools</span>
+            </a>
+        </div>
+    </div>
+ 
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+ 
+    <nav id="mainNav">
+        <div class="dropdown" id="homeDropdown">
+            <a href="index.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                Home <i class="fa-solid fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+                <a href="index1.html" class="active">Home – Premium</a>
+                <a href="eindex1.html">Home – Elite</a>
+            </div>
+        </div>
+ 
+        <a href="about1.html" class="active">About Us</a>
+        <a href="services1.html">Services</a>
+        <a href="blog1.html">Blog</a>
+        <a href="contact1.html">Contact</a>
+        <a href="dashboard1.html">Dashboard</a>
+    </nav>
+ 
+    <div class="header-actions">
+        <button class="display-btn" id="rtlMode" type="button" aria-label="Toggle text direction">RTL</button>
+        <button class="display-btn" id="themeMode" type="button" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="login.html" class="login-btn"> Login</a>
+    </div>
+</header>
+ 
+<main>
+ 
+    <!-- HERO -->
+    <section class="hero" id="home" st>
+        <div class="hero-content">
+            <span class="eyebrow">GET TO KNOW BLUEWAVE POOLS</span>
+            <h1>We create more<br>than pools. <em>We create experiences.</em></h1>
+            <p>We bring thoughtful pool design, careful construction and beautiful outdoor living ideas together to help you create your own place to relax and enjoy.</p>
+ 
+            <div class="hero-buttons">
+                <a href="#story" class="btn">OUR STORY <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#contact" class="btn-outline">LET'S CONNECT</a>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- STORY -->
+    <section class="section story" id="story">
+        <div class="story-image reveal">
+            <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=85"
+                 alt="Beautiful swimming pool surrounded by a landscaped garden" loading="lazy">
+        </div>
+ 
+        <div class="story-content reveal">
+            <span class="eyebrow">OUR STORY</span>
+            <h2>Passion for pools.<br><em>Commitment to quality.</em></h2>
+ 
+            <p class="lead">Every great outdoor space starts with an idea. We help turn that idea into a thoughtfully designed pool experience.</p>
+ 
+            <p>Bluewave Pools is focused on swimming pool design, installation, construction, renovation and maintenance. Our approach starts by understanding the property, the client's vision and the way the space will be used.</p>
+ 
+            <p>From planning and design to construction and finishing details, we believe that clear communication and careful workmanship make every project better.</p>
+ 
+            <div class="story-highlight">
+                <i class="fa-solid fa-water"></i>
+                <p>Our goal is to create inviting pool spaces that bring comfort, beauty and enjoyment to everyday living.</p>
+            </div>
+ 
+            <a href="contact.html" class="btn">START A CONVERSATION ↗</a>
+        </div>
+    </section>
+ 
+    <!-- VALUES -->
+    <section class="section values" id="values">
+        <div class="section-heading reveal">
+            <span class="eyebrow">WHAT GUIDES US</span>
+            <h2>Our values shape <em>every project.</em></h2>
+            <p>The principles that guide the way we plan, design and build swimming pool spaces.</p>
+        </div>
+ 
+        <div class="value-grid">
+            <article class="value-card reveal">
+                <div class="value-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                <h3>Creativity</h3>
+                <p>We value fresh ideas and thoughtful design choices that make each pool space distinctive.</p>
+            </article>
+ 
+            <article class="value-card reveal">
+                <div class="value-icon"><i class="fa-solid fa-medal"></i></div>
+                <h3>Quality</h3>
+                <p>We focus on careful planning, suitable materials and attention to detail throughout the project.</p>
+            </article>
+ 
+            <article class="value-card reveal">
+                <div class="value-icon"><i class="fa-solid fa-handshake"></i></div>
+                <h3>Trust</h3>
+                <p>We believe in honest communication, clear expectations and collaborative decisions.</p>
+            </article>
+ 
+            <article class="value-card reveal">
+                <div class="value-icon"><i class="fa-solid fa-users"></i></div>
+                <h3>Customer Focus</h3>
+                <p>We listen to our clients and consider their needs at every stage of the project.</p>
+            </article>
+ 
+            <article class="value-card reveal">
+                <div class="value-icon"><i class="fa-solid fa-leaf"></i></div>
+                <h3>Thoughtful Planning</h3>
+                <p>We consider the available space, intended use and overall outdoor environment.</p>
+            </article>
+ 
+            <article class="value-card reveal">
+                <div class="value-icon"><i class="fa-solid fa-clock"></i></div>
+                <h3>Responsibility</h3>
+                <p>We value organised work, regular communication and responsible project coordination.</p>
+            </article>
+        </div>
+    </section>
+ 
+    <!-- MISSION AND VISION -->
+    <section class="section mission" id="mission">
+        <article class="mission-card reveal">
+            <i class="fa-solid fa-bullseye"></i>
+            <h3>Our Mission</h3>
+            <p>To create beautiful and functional swimming pool spaces through thoughtful design, careful construction and a client-focused approach.</p>
+        </article>
+ 
+        <article class="mission-card reveal">
+            <i class="fa-solid fa-eye"></i>
+            <h3>Our Vision</h3>
+            <p>To become a trusted name in swimming pool design and construction by consistently focusing on quality, creativity and customer satisfaction.</p>
+        </article>
+    </section>
+    
+    <section id="our-team" style="padding:70px 7%; background:var(--page, #ffffff); color:var(--text, #163653);">
+    <div style="max-width:1200px; margin:auto;">
+        <div style="text-align:center; margin-bottom:40px;">
+            <span style="color:var(--blue, #008fe8); font-size:13px; font-weight:bold; letter-spacing:2px;">MEET OUR EXPERTS</span>
+            <h2 style="font-size:36px; margin:12px 0; color:var(--heading, #123957);">Our <span style="color:var(--blue, #008fe8);">Professional Team</span></h2>
+            <p style="color:var(--muted, #536b80); line-height:1.7;">Meet our experienced professionals dedicated to designing and building your dream swimming pool.</p>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:24px;">
+            <div style="background:var(--card, #ffffff); border:1px solid var(--border, #d8e4ee); border-radius:16px; overflow:hidden; text-align:center;">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="Project Manager" style="width:100%; height:250px; object-fit:cover; display:block;">
+                <div style="padding:22px 16px;">
+                    <h3 style="margin:0 0 8px; color:var(--heading, #123957);">Arjun Reddy</h3>
+                    <h4 style="margin:0 0 12px; color:var(--blue, #008fe8);">Project Manager</h4>
+                    <p style="color:var(--muted, #536b80); line-height:1.6; font-size:14px;">Coordinates pool construction projects and ensures quality completion.</p>
+                </div>
+            </div>
+
+            <div style="background:var(--card, #ffffff); border:1px solid var(--border, #d8e4ee); border-radius:16px; overflow:hidden; text-align:center;">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="Pool Design Specialist" style="width:100%; height:250px; object-fit:cover; display:block;">
+                <div style="padding:22px 16px;">
+                    <h3 style="margin:0 0 8px; color:var(--heading, #123957);">Rahul Sharma</h3>
+                    <h4 style="margin:0 0 12px; color:var(--blue, #008fe8);">Pool Design Specialist</h4>
+                    <p style="color:var(--muted, #536b80); line-height:1.6; font-size:14px;">Designs modern and attractive swimming pools to suit each customer.</p>
+                </div>
+            </div>
+
+            <div style="background:var(--card, #ffffff); border:1px solid var(--border, #d8e4ee); border-radius:16px; overflow:hidden; text-align:center;">
+                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" alt="Construction Engineer" style="width:100%; height:250px; object-fit:cover; display:block;">
+                <div style="padding:22px 16px;">
+                    <h3 style="margin:0 0 8px; color:var(--heading, #123957);">Vikram Kumar</h3>
+                    <h4 style="margin:0 0 12px; color:var(--blue, #008fe8);">Construction Engineer</h4>
+                    <p style="color:var(--muted, #536b80); line-height:1.6; font-size:14px;">Supervises construction quality, structural work, and safety.</p>
+                </div>
+            </div>
+
+            <div style="background:var(--card, #ffffff); border:1px solid var(--border, #d8e4ee); border-radius:16px; overflow:hidden; text-align:center;">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" alt="Customer Support Specialist" style="width:100%; height:250px; object-fit:cover; display:block;">
+                <div style="padding:22px 16px;">
+                    <h3 style="margin:0 0 8px; color:var(--heading, #123957);">Priya Reddy</h3>
+                    <h4 style="margin:0 0 12px; color:var(--blue, #008fe8);">Customer Support</h4>
+                    <p style="color:var(--muted, #536b80); line-height:1.6; font-size:14px;">Assists customers with service questions and pool maintenance support.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ 
+    <!-- WHY CHOOSE US -->
+    <section class="section why-us" id="why-us">
+        <div class="why-layout">
+            <div class="why-image reveal">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85"
+                     alt="Modern home with a beautiful outdoor pool" loading="lazy">
+            </div>
+ 
+            <div class="why-content reveal">
+                <span class="eyebrow">WHY BLUEWAVE POOLS</span>
+                <h2>A thoughtful approach<br>to <em>every detail.</em></h2>
+                <p style="color:var(--muted);font-size:13px;margin-top:15px;">
+                    Choosing a pool design and construction team is an important decision. We focus on making the experience clear and collaborative.
+                </p>
+ 
+                <div class="why-list">
+                    <div class="why-item">
+                        <span><i class="fa-solid fa-pen-ruler"></i></span>
+                        <div>
+                            <h3>Personalised Designs</h3>
+                            <p>Design ideas shaped around your space, needs and preferences.</p>
+                        </div>
+                    </div>
+ 
+                    <div class="why-item">
+                        <span><i class="fa-solid fa-helmet-safety"></i></span>
+                        <div>
+                            <h3>Careful Construction</h3>
+                            <p>Attention to planning, materials and finishing details.</p>
+                        </div>
+                    </div>
+ 
+                    <div class="why-item">
+                        <span><i class="fa-solid fa-comments"></i></span>
+                        <div>
+                            <h3>Clear Communication</h3>
+                            <p>Collaborative discussions and project updates throughout the journey.</p>
+                        </div>
+                    </div>
+ 
+                    <div class="why-item">
+                        <span><i class="fa-solid fa-screwdriver-wrench"></i></span>
+                        <div>
+                            <h3>Complete Pool Services</h3>
+                            <p>Support across pool construction, design, renovation and maintenance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- PROCESS -->
+    <section class="section process" id="process">
+        <div class="section-heading reveal">
+            <span class="eyebrow">HOW WE WORK</span>
+            <h2>From first idea to <em>finished pool.</em></h2>
+            <p>We follow a clear process to help clients understand each stage of their project.</p>
+        </div>
+ 
+        <div class="process-grid">
+            <article class="process-card reveal">
+                <span class="process-number">01</span>
+                <h3>Understand</h3>
+                <p>We learn about your requirements, property and preferred pool style.</p>
+            </article>
+ 
+            <article class="process-card reveal">
+                <span class="process-number">02</span>
+                <h3>Design & Plan</h3>
+                <p>We discuss layout ideas, materials, project details and next steps.</p>
+            </article>
+ 
+            <article class="process-card reveal">
+                <span class="process-number">03</span>
+                <h3>Build</h3>
+                <p>The approved plan moves into construction and finishing work.</p>
+            </article>
+ 
+            <article class="process-card reveal">
+                <span class="process-number">04</span>
+                <h3>Complete</h3>
+                <p>We review the completed work and discuss care and maintenance.</p>
+            </article>
+        </div>
+    </section>
+ 
+    <!-- GALLERY -->
+    <section class="section gallery" id="gallery">
+        <div class="section-heading reveal">
+            <span class="eyebrow">OUR INSPIRATION</span>
+            <h2>Spaces that inspire <em>relaxation.</em></h2>
+            <p>A collection of pool and outdoor living inspiration for your next project.</p>
+        </div>
+ 
+        <div class="gallery-grid">
+            <div class="gallery-item reveal">
+                <img src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=1000&q=85"
+                     alt="Contemporary swimming pool" loading="lazy">
+            </div>
+ 
+            <div class="gallery-item reveal">
+                <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=85"
+                     alt="Poolside garden" loading="lazy">
+            </div>
+ 
+            <div class="gallery-item reveal">
+                <img src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=800&q=85"
+                     alt="Swimming pool water" loading="lazy">
+            </div>
+ 
+            <div class="gallery-item reveal">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=85"
+                     alt="Modern residential pool" loading="lazy">
+            </div>
+ 
+            <div class="gallery-item reveal">
+                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=85"
+                     alt="Outdoor architecture" loading="lazy">
+            </div>
+        </div>
+ 
+        <div style="text-align:center;margin-top:35px;">
+            <a href="gallery.html" class="btn">EXPLORE FULL GALLERY ↗</a>
+        </div>
+    </section>
+ 
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+        <div class="section-heading reveal">
+            <span class="eyebrow">HAVE QUESTIONS?</span>
+            <h2>Frequently asked <em>questions.</em></h2>
+            <p>Some useful information about our pool design and construction services.</p>
+        </div>
+ 
+        <div class="faq-container">
+ 
+            <div class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false">
+                    What services does Bluewave Pools offer?
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="faq-answer">
+                    <div>
+                        <p>Bluewave Pools focuses on swimming pool design, installation, construction, renovation and maintenance.</p>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false">
+                    Can I request a customised swimming pool?
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="faq-answer">
+                    <div>
+                        <p>Yes. You can discuss your available space, preferred design and requirements with the team to explore suitable custom options.</p>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false">
+                    How does the pool construction process work?
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="faq-answer">
+                    <div>
+                        <p>The process generally involves understanding your requirements, planning and design, construction, and completion. Actual timelines depend on the project scope and site conditions.</p>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false">
+                    Do you provide pool renovation services?
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="faq-answer">
+                    <div>
+                        <p>Pool renovation is one of the services listed on this website. Contact the team to discuss the condition of your existing pool and the upgrades you have in mind.</p>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false">
+                    How can I start a project?
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="faq-answer">
+                    <div>
+                        <p>Use the contact page or enquiry form to share your name, contact details and project requirements.</p>
+                    </div>
+                </div>
+            </div>
+ 
+        </div>
+    </section>
+ 
+    <!-- CTA -->
+    <section class="cta" id="contact">
+        <div class="reveal">
+            <span class="eyebrow" style="color:#8be4d7;">LET'S BUILD SOMETHING BEAUTIFUL</span>
+            <h2>Your vision. Our <em>craftsmanship.</em></h2>
+            <p>Have a pool project in mind? We'd love to hear your ideas and help you explore the possibilities.</p>
+            <a href="contact.html" class="btn">CONTACT OUR TEAM <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </section>
+ 
+</main>
+ 
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+ 
+        <div class="footer-column">
+            <div class="logo">
+                <img src="images/Glossy Blue Pool House Emblem.png" alt="Bluewave Pools Logo">
+                <div class="brand-text">
+                    <a href="index.html">
+                        <span class="brand-bluewave">Bluewave</span>
+                        <span class="brand-pools">Pools</span>
+                    </a>
+                </div>
+            </div>
+ 
+            <p>Swimming Pool Installation & Construction Company.</p>
+            <p>Quality Pools. Lasting Impressions.</p>
+ 
+            <div class="social-links">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://wa.me/917799629151" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+ 
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <p>Your Business Address</p>
+            <p>+91 7799629151</p>
+            <p>info@aqualifepools.com</p>
+            <p>Mon - Sat: 9 AM - 6 PM</p>
+        </div>
+ 
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home – Premium</a>
+            <a href="eindex.html">Home – Elite</a>
+            <a href="about.html">About Us</a>
+            <a href="gallery.html">Gallery</a>
+        </div>
+ 
+        <div class="footer-column">
+            <h3>Our Services</h3>
+            <a href="pool-types.html">Pool Types</a>
+            <a href="process.html">Our Process</a>
+            <a href="contact.html">Pool Construction</a>
+            <a href="contact.html">Pool Renovation</a>
+        </div>
+ 
+    </div>
+ 
+    <div class="copyright">
+        <p>&copy; <span id="currentYear"></span> Bluewave Pools. All Rights Reserved.</p>
+        <div class="legal-links">
+            <a href="terms.html">Terms &amp; Conditions</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+    </div>
+</footer>
+ 
+<script>
+/* CURRENT YEAR */
+document.getElementById("currentYear").textContent = new Date().getFullYear();
+ 
+/* DARK MODE */
+const themeMode = document.getElementById("themeMode");
+const themeIcon = themeMode.querySelector("i");
+ 
+try {
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+        themeIcon.className = "fa-solid fa-sun";
+    }
+} catch (error) {}
+ 
+themeMode.addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
+ 
+    const isDark = document.body.classList.contains("dark-mode");
+ 
+    themeIcon.className = isDark
+        ? "fa-solid fa-sun"
+        : "fa-solid fa-moon";
+ 
+    try {
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+    } catch (error) {}
+});
+ 
+/* RTL MODE */
+const rtlMode = document.getElementById("rtlMode");
+ 
+try {
+    if (localStorage.getItem("dir") === "rtl") {
+        document.documentElement.dir = "rtl";
+        rtlMode.classList.add("active");
+    }
+} catch (error) {}
+ 
+rtlMode.addEventListener("click", function () {
+    const isRTL = document.documentElement.dir !== "rtl";
+ 
+    document.documentElement.dir = isRTL ? "rtl" : "ltr";
+    rtlMode.classList.toggle("active", isRTL);
+ 
+    try {
+        localStorage.setItem("dir", isRTL ? "rtl" : "ltr");
+    } catch (error) {}
+});
+ 
+/* MOBILE NAVIGATION */
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
+ 
+menuToggle.addEventListener("click", function () {
+    const isOpen = mainNav.classList.toggle("show");
+ 
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.innerHTML = isOpen
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
+});
+ 
+/* HOME DROPDOWN */
+const homeDropdown = document.getElementById("homeDropdown");
+const dropdownToggle = homeDropdown.querySelector(".dropdown-toggle");
+ 
+dropdownToggle.addEventListener("click", function (event) {
+    if (window.matchMedia("(max-width: 900px)").matches) {
+        event.preventDefault();
+ 
+        const isOpen = homeDropdown.classList.toggle("open");
+        dropdownToggle.setAttribute("aria-expanded", String(isOpen));
+    }
+});
+ 
+document.addEventListener("click", function (event) {
+    if (!homeDropdown.contains(event.target)) {
+        homeDropdown.classList.remove("open");
+        dropdownToggle.setAttribute("aria-expanded", "false");
+    }
+});
+ 
+/* CLOSE MOBILE MENU */
+mainNav.querySelectorAll("a:not(.dropdown-toggle)").forEach(function (link) {
+    link.addEventListener("click", function () {
+        mainNav.classList.remove("show");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    });
+});
+ 
+/* SCROLL REVEAL */
+const revealItems = document.querySelectorAll(".reveal");
+ 
+if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.12
+    });
+ 
+    revealItems.forEach(function (item) {
+        revealObserver.observe(item);
+    });
+} else {
+    revealItems.forEach(function (item) {
+        item.classList.add("show");
+    });
+}
+ 
+/* FAQ ACCORDION */
+document.querySelectorAll(".faq-question").forEach(function (button) {
+    button.addEventListener("click", function () {
+        const currentItem = button.closest(".faq-item");
+        const wasOpen = currentItem.classList.contains("open");
+ 
+        document.querySelectorAll(".faq-item").forEach(function (item) {
+            item.classList.remove("open");
+            item.querySelector(".faq-question").setAttribute("aria-expanded", "false");
+        });
+ 
+        if (!wasOpen) {
+            currentItem.classList.add("open");
+            button.setAttribute("aria-expanded", "true");
+        }
+    });
+});
+</script>
+ 
+</body>
+</html>
+ 
